@@ -401,7 +401,7 @@ Finally, test it on the Alexa developer console, and if you can speak out if you
 
 ![](images/chapxx-kun432/s102.png)
 
-//note[judgment of undefined] {
+//note[judgment of undefined]{
 Of course you can also determine undefind straight. Voiceflow's If block has a description method called Advanced Expression, which can be determined by programmatic writing. If you are used to programming, this may be easier to understand. See also the official documentation. @<br>{}
 
 Advanced expression (IF and SET blocks)-Voiceflow Docs @<br>{}
