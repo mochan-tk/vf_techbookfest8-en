@@ -1,4 +1,4 @@
-# Connect with Google Spreadsheet
+# Google Spreadsheet Integration
 
 If you use Voiceflow's Google spreadsheet link function, you can use it as a simple database that can be used with the same ease of use as your usual Excel, so the range of skill development will expand at a stretch. Let's make use of it to create higher-grade skills.
 
