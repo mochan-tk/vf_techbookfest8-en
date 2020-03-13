@@ -30,7 +30,7 @@ I used a Mac, but Windows has common tools. Please read as appropriate and proce
 
 #### Parts used, smart speakers
 
-* M5StickC ¥ 1,980 @ <fn> {sitopp_prices}
+* M5StickC ¥ 1,980 @<fn>{sitopp_prices}
 * Infrared transmitter / receiver unit for M5 ¥ 308
 * Google Home mini
 
@@ -61,7 +61,7 @@ Install Arduino IDE. Skip those who are already using it.
 * Open the Arduino web page (```https: // www.arduino.cc /```) in chrome.
 * Click "SOFTWARE" → "DOWNLOAD".
 * Click "``` Mac OS X 10.8 Mountain Lion or newer``` "in the paragraph of" Download the Arduino IDE ".
-* When "Contribute to the Arduino Software" page opens, click "JUST DOWNLOAD" @ <fn> {sitopp_donate}.
+* When "Contribute to the Arduino Software" page opens, click "JUST DOWNLOAD" @<fn>{sitopp_donate}.
 * Wait for the download of the approximately 200MB file to finish.
 * Expand the downloaded zip file and the application "Arduino.app" will appear. Move to the application folder.
 
@@ -176,7 +176,7 @@ Example) The command pattern of infrared rays when pressing OFF and ON once each
 ### Prepare C ++ code, install it on M5StickC and make it a remote control
 
 The command pattern of the infrared remote control is not unified among manufacturers, and the format is different.
-This book explains how to use Daikin's air conditioner. @ <fn> {sitopp_maker}
+This book explains how to use Daikin's air conditioner. @<fn>{sitopp_maker}
 
 //footnote[sitopp_maker][About maker other than Daikin, there was a page that kindly explained variously when googled, so I introduced it in the section "In case of maker other than Daikin". Please refer to it. ]
 
@@ -384,10 +384,10 @@ If you are new to Voiceflow, please go through "1.2 How to Use Voiceflow" at the
 
 * Access voiceflow in Chrome and log in. https://www.voiceflow.com/
 * Click "create Project" → Enter the Actions name in "Enter your Project name".
-* In this article, the Actions name is "Shoinji". @ <fn> {sitopp_actionsname}
+* In this article, the Actions name is "Shoinji". @<fn>{sitopp_actionsname}
 
 
-//footnote[sitopp_actionsname][Actions name is not public, so anything is fine. This year's M-1 Pokopo was interesting, so I'll use it in this article. Please replace it with your favorite name. ]
+//footnote[sitopp_actionsname][Actions name is not public, so anything is fine. This year's M-1 Pokopo was interesting, so I'll use it in this article. Please replace it with your favorite name.]
 
 
 * Check "Japanese" on the Select Regions screen and uncheck "English (US)".
@@ -403,10 +403,10 @@ From here on, I will explain in detail with screenshots.
 This is the basic usage of Speak block. @<br>{}
 (1) Slide the "Alexa Google" switch on the header to "Google". @<br>{}
 Confirm that the "Upload to Alexa" button changes to "Upload to Google". @<br>{}
-(2) Click “``` ▶ ︎Basic``` ”in the“ Blocks ”menu to open it. @<br>{}
+(2) Click “```▶ ︎Basic```” in the “Blocks” menu to open it. @<br>{}
 (3) Click "Speak" and drag it to the right margin of the block marked "Home". @<br>{}
 (4) Draw a line from the right end of the “Start” line of the Home block and connect it to the left side of the Speak block. @<br>{}
-(5) Click the Speak block, and the input field will pop out from the right, so click the second largest character "Speak" from the top and overwrite it with "``` Speak_Guidance``` ". @<br>{}
+(5) Click the Speak block, and the input field will pop out from the right, so click the second largest character "Speak" from the top and overwrite it with "```Speak_Guidance```". @<br>{}
 (6) Enter "Please turn on the air conditioner or turn off the air conditioner" in the entry field under "System Says". @<br>{}
 (7) Click the margin in the center editor to close and save the editing window in the right pane. @<br>{}
 
@@ -416,11 +416,11 @@ Confirm that the "Upload to Alexa" button changes to "Upload to Google". @<br>{}
 ![](images/chapxx-sitopp/sito_030_2.png)
 
 A block to turn on the air conditioner and pick up utterances. I will make them together for each meaning. @<br>{}
-(1) Click “``` ▶ ︎Basic``` ”in the“ Blocks ”menu to open it, and drag“ Intent ”under“ ```Speak_Guidance```”. @<br>{}
-(2) When you click the Intent block, the input field pops out from the right, so click the second big descriptive character from the top, `` Intent '' and overwrite `````Intent_ attach air conditioner``` '' . @<br>{}
+(1) Click “```▶ ︎Basic```” in the“ Blocks ”menu to open it, and drag “Intent” under “```Speak_Guidance```”. @<br>{}
+(2) When you click the Intent block, the input field pops out from the right, so click the second big descriptive character from the top, "Intent" and overwrite ```Intent_attach_air_conditioner```. @<br>{}
 (3) Click “Name new intent or select existing intent”. @<br>{}
-Click "Name new intent", enter "` "aircon_on```", and click "Create". @<br>{}
-(4) Click “What might the user say to invoke this intent?” Under “Utterances” and enter “Turn on” and enter. @<br>{} @ <fn> {sitopp_danbo}
+Click "Name new intent", enter "```aircon_on```", and click "Create". @<br>{}
+(4) Click “What might the user say to invoke this intent?” Under “Utterances” and enter “Turn on” and enter. @<br>{} @<fn>{sitopp_danbo}
 Click "Add Synonyms of the user response", enter "Turn on heating" and enter. @<br>{}
 Enter "Turn on the air conditioner" and enter. @<br>{}
 Enter "Turn on the air conditioner" and enter. @<br>{}
@@ -429,9 +429,9 @@ Note) The left side to the Intent block does not connect the line from anywhere.
 
 Similarly, make a part to turn off the air conditioner.
 
-* Click "``` ▶ ︎Basic``` "in the" Blocks "menu to open it, then drag" Intent "under" ```Speak_Guidance```".
-* Click the Intent block to display the edit field, and click the second largest "Intent" from the top to overwrite with "``` Intent_Turn off air conditioner``` ".
-* Click "Name new intent", enter "``` aircon_off``` ", and click" Create ".
+* Click "```▶ ︎Basic```"in the "Blocks" menu to open it, then drag "Intent" under "```Speak_Guidance```".
+* Click the Intent block to display the edit field, and click the second largest "Intent" from the top to overwrite with "```Intent_Turn_off_air_conditioner```".
+* Click "Name new intent", enter "```aircon_off```", and click "Create".
 * Enter "Heating" in the entry field under "Utterances" and enter.
 * Similarly, enter "Turn off heating" and enter.
 * Similarly, enter "Turn off the air conditioner" and enter.
@@ -448,7 +448,7 @@ Similarly, make a part to turn off the air conditioner.
 To make the flow cleaner, we will use parameters. @<br>{}
 (1) Click the third icon "Variables" from the top of the ultra-thin pane on the left of the Design screen. @<br>{}
 (2) Enter “device” in the “Create Variable (Project)” input field and enter. @<br>{}
-(3) "``` {device} ```" is added at the end of the Variables list. @<br>{}
+(3) "```{device}```" is added at the end of the Variables list. @<br>{}
 (4) Add ```{onoff}``` as well. @<br>{}
 
 #### Creating a set block to route parameters
@@ -467,26 +467,26 @@ The Set block can set parameters. @<br>{}
 
 Similarly, make a Set block to turn off the air conditioner.
 
-* Right-click the ```SetParam_aircon_on``` '' block and select` `Copy Block ''
-* Right-click on the margin below the `` '' `SetParam_aircon_on``` '' block and select` `Paste ''
-* Click the duplicated block to display the edit field, click the second bigger character from the top, `````SetParam_aircon_on``` '', and overwrite it with````` SetParam_aircon_off``` '' .
+* Right-click the "```SetParam_aircon_on```" block and select "Copy Block".
+* Right-click on the margin below the "```SetParam_aircon_on```" block and select "Paste". 
+* Click the duplicated block to display the edit field, click the second bigger character from the top, "```SetParam_aircon_on```", and overwrite it with "```SetParam_aircon_off```".
 * Click "^" to the right of "Set onoff to" and overwrite it with "off" when "on" is displayed.
-* Connect a line from the right side of "``` Intent_Turn off the air conditioner``` '.
+* Connect a line from the right side of "```Intent_Turn off the air conditioner```".
 
 #### Creation of Integrations block for calling external API
 
 ![](images/chapxx-sitopp/sito_030_5.png)
 
 Integrations block can be linked with API and GoogleSheet. @<br>{}
-(1) Drag “▶ ︎Advanced” → “Integrations” to the right of “``` SetParam_aircon_on``` ”. @<br>{}
-(2) Put out a line from the right side of "``` SetParam_aircon_on``` "and connect. Similarly, draw a line from "``` SetParam_aircon_off``` "and connect. @<br>{}
+(1) Drag “▶ ︎Advanced” → “Integrations” to the right of “```SetParam_aircon_on```”. @<br>{}
+(2) Put out a line from the right side of "```SetParam_aircon_on```" and connect. Similarly, draw a line from "```SetParam_aircon_off```" and connect. @<br>{}
 Click the Integrations block to open the settings screen. @<br>{}
 Click “Custom API”. @<br>{}
 (3) Click “GET” under “Request URL” and select “POST” from the options. @<br>{}
 (4) Enter the URL issued by IFTTT's Webhooks. @<br>{}
 (5) Click “Headers” in “Headers Body Params” under it. @<br>{}
 (6) Enter “Content-Type” in “Enter HTTP Header” of Header Assignments. @<br>{}
-(7) Enter “application / json” in Value. @<br>{}
+(7) Enter “application/json” in Value. @<br>{}
 
 
 #### Creation of Integrations block for calling external API-continued
@@ -501,10 +501,10 @@ In addition to the type of home appliances and on / off, pass a string for authe
 (5) Click + on the right side to add an input field. @<br>{}
 (6) Enter “value2” for “Enter key” and “{onoff}” for “value”. @<br>{}
 (7) Click the + on the right again to add an input field. @<br>{}
-(8) Enter “value3” in “Enter key” and ** any password ** in “value”. Do not use {}. @<br>{}
-Note) In this example, 8 characters of "t7d = ClVt" are used. Please fill in the string that is unknown to others.
+(8) Enter “value3” in “Enter key” and **any password** in “value”. Do not use {}. @<br>{}
+Note) In this example, 8 characters of "t7d=ClVt" are used. Please fill in the string that is unknown to others.
 It is better to close your eyes and hit the keyboard or use an automatic password generation site.
-From now on, the explanation will proceed as "t7d = ClVt", so please replace it with your own passphrase. @<br>{} @ <br> {}
+From now on, the explanation will proceed as "t7d=ClVt", so please replace it with your own passphrase. @<br>{} @ <br> {}
 
 Next, create a block that tells you that it's done. There is no session, so please read the explanation carefully and proceed.
 
@@ -516,13 +516,13 @@ Next, create a block that tells you that it's done. There is no session, so plea
 ![](images/chapxx-sitopp/sito_030_7.png)
 
 Used to fork a conversation started from the Start block with Intent. @<br>{}
-(1) Drag `` ▶ ︎Basic '' → `` Choice '' to the right of `````Speak_Guidance``` '', draw a line from````` Speak_Guidance``` '' and connect it,
+(1) Drag "▶ ︎Basic" → "Choice" to the right of "```Speak_Guidance```", draw a line from "```Speak_Guidance```" and connect it,
 Click the Choice block to open the settings screen. @<br>{}
-(2) Click the option under "1 path" and select "``` aircon_on``` ". @<br>{}
+(2) Click the option under "1 path" and select "``` aircon_on```". @<br>{}
 (3) Click “Add path”. @<br>{}
-(4) When “2 path” is generated, click the same option and select “``` aircon_off``` ”. @<br>{}
-(5) Connect a line from "1" in the Choice block to the "``` SetParam_aircon_on``` "block. @<br>{}
-(6) Connect a line from "2" in the Choice block to the "``` SetParam_aircon_off``` "block. @<br>{}
+(4) When “2 path” is generated, click the same option and select “```aircon_off```”. @<br>{}
+(5) Connect a line from "1" in the Choice block to the "```SetParam_aircon_on```" block. @<br>{}
+(6) Connect a line from "2" in the Choice block to the "```SetParam_aircon_off```" block. @<br>{}
 
 The flow is now complete. Please take a break and drink coffee (^ p ^).
 
@@ -535,7 +535,7 @@ The flow is now complete. Please take a break and drink coffee (^ p ^).
 * Click "Test Request" at the bottom right of the input field of the Integrations block.
 * When the popup opens, enter "aircon" for "Device" and "on" for "ONOFF", and click "Send Request".
 * On the next screen, open the "Raw" tab and read the displayed characters.
-* It is OK if ```" Congratulations! You're fired the M5StickCIRRemoCon event "``` is displayed.
+* It is OK if "```Congratulations! You're fired the M5StickCIRRemoCon event```" is displayed.
 * Otherwise, check the POST URL because it is incorrect.
 
 (2) Flow test
@@ -551,11 +551,11 @@ The flow is now complete. Please take a break and drink coffee (^ p ^).
 ![IFTTT Webhoooks execution history](images/chapxx-sitopp/sito_031.png)
 
 * Access IFTTT's My Applet. (```https://ifttt.com/my_applets```)
-* Click the created applet "``` If Maker Event "M5StickCIRRemoCon", then Send data to onoff feed``` ".
+* Click the created applet "```If Maker Event "M5StickCIRRemoCon", then Send data to onoff feed```".
 * Click “Settings”.
 * Click the "View activity" button to open the history list.
-* If executed normally, there should be a block of ```` Applet ran```.
-* It is OK if there is a time of "Test Request" in Voiceflow Design and a time of "` "Appletran```".
+* If executed normally, there should be a block of "```Applet ran```".
+* It is OK if there is a time of "Test Request" in Voiceflow Design and a time of "```Appletran```".
 * If there is no history, some error has occurred. There is a high possibility that the URL specified on Voiceflow is different, so review it.
 
 
@@ -623,7 +623,7 @@ I recommend using Adafruit's thankful MQTT library.
 
 ```
 URL: https://GitHub.com/sitopp/vf_techbookfest8_sampleCode
-File path: M5StickC / IRsend_DAIKIN_MQTT_forM5StickC.ino
+File path: M5StickC/IRsend_DAIKIN_MQTT_forM5StickC.ino
 ```
 
 * Rewrite the Wifi account on lines 10-11 to your own.
