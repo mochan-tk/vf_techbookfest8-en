@@ -301,7 +301,7 @@ You are ready to receive user utterances as search criteria. Let's search the sp
 
 ![](images/chapxx-kun432/s080.png)
 
-In the case of random, left side "Row Number" was selected, right side "Value to Match" was empty. Select "recipe \ _name" on the left and ```{slot_recipe_name}``` on the right, as shown below. This means that you can search by specifying what you spoke with the variable ```slot_recipe_name``` in the" recipe \ _name "column. Click “Next”.
+In the case of random, left side "Row Number" was selected, right side "Value to Match" was empty. Select "recipe\_name" on the left and ```{slot_recipe_name}``` on the right, as shown below. This means that you can search by specifying what you spoke with the variable ```slot_recipe_name``` in the"recipe\_name" column. Click “Next”.
 
 ![](images/chapxx-kun432/s082.png)
 
