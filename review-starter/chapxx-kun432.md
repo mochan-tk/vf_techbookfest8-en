@@ -13,7 +13,7 @@ First, log in to Google Spreadsheets with your Google account and create a sprea
 ![](images/chapxx-kun432/s009.png)
 
 -The spreadsheet name is "My recipe data" and the sheet name (tab below) is "Recipe list".
--Enter `` `recipe_name``` for A1 and` `` recipe_content``` for B1. The first line is always the heading line. Please note that you cannot specify in Japanese.
+-Enter ```recipe_name``` for A1 and``` recipe_content``` for B1. The first line is always the heading line. Please note that you cannot specify in Japanese.
 -In the second and subsequent rows, enter the recipe name in column A and the ingredients in column B.
 
 Next, create the following project on the Voiceflow side and place the blocks.
@@ -28,7 +28,7 @@ Next, create the following project on the Voiceflow side and place the blocks.
 Welcome to our recipe skills. This skill will teach you a random recipe. Today ’s recommendation is <audio src = "soundbank: // soundlibrary / ui / gameshow / amzn \ _ui \ _sfx \ _gameshow \ _intro \ _01" />
 //}
 
-By the way, the last `` `<audio src = ~` `` part uses "Alexa Skills Kit sound library" to play sound effects.
+By the way, the last ```<audio src = ~``` part uses "Alexa Skills Kit sound library" to play sound effects.
 
 // note [Alexa Skills Kit sound library] {
 @ <href> {https://developer.amazon.com/ja-JP/docs/alexa/custom-skills/ask-soundlibrary.html}
@@ -112,11 +112,11 @@ It is successful if the recipe name and ingredients listed in the spreadsheet ar
 
 You have linked with Google Spreadsheets, but you still can't use that data from within your skill. You need to use "variables" to use the data obtained from the spreadsheet in your skill. Let's create a variable first.
 
-Create variables from the "Variables Menu". Click the icon at the bottom of the three vertical icons on the left of the screen to switch the menu. Enter the variable name in the input form just below "Create Variable" and press the ENTER key to create the variable. First, type `` `varName``` and press ENTER.
+Create variables from the "Variables Menu". Click the icon at the bottom of the three vertical icons on the left of the screen to switch the menu. Enter the variable name in the input form just below "Create Variable" and press the ENTER key to create the variable. First, type ```varName``` and press ENTER.
 
 ![](images/chapxx-kun432/s016-2.png)
 
-If `` `varName``` is displayed at the end of` `` sessions``` etc. displayed just below the input field, the variable has been successfully created. Similarly, create a variable called `` `varContent```.
+If ```varName``` is displayed at the end of``` sessions``` etc. displayed just below the input field, the variable has been successfully created. Similarly, create a variable called ```varContent```.
 
 ![](images/chapxx-kun432/s039.png)
 
@@ -148,11 +148,11 @@ Click "+ Add Mapping" to select "Column" and "Variable" respectively. Specify th
 \ clearpage
 //}
 
-Now, let's link. Select `` `recipe_name``` for" Column "and` `` varName``` for "Variable".
+Now, let's link. Select ```recipe_name``` for" Column "and``` varName``` for "Variable".
 
 ![](images/chapxx-kun432/s024-2.png)
 
-The data in the `` `recipe_name``` column of the spreadsheet is now in the variable` `` varName```. Similarly, associate the `` `recipe_content``` column with the variable` `` varContent```. Click "+ Add Mapping" to add the settings in the same way.
+The data in the ```recipe_name``` column of the spreadsheet is now in the variable``` varName```. Similarly, associate the ```recipe_content``` column with the variable``` varContent```. Click "+ Add Mapping" to add the settings in the same way.
 
 It is OK if both can be linked and look like this. Click Next to return to the canvas.
 
@@ -168,9 +168,9 @@ Now, let's use the data obtained from the spreadsheet from within the skill. Pla
 
 Set the Speak block as follows.
 
-`` `
+```
 {varName}. The material is {varContent}.
-`` `
+```
 
 Let's test it by uploading it to the Alexa Developer Console. It is OK if you can execute the skill several times to confirm that the data of Google Spreadsheet has been obtained and that the data changes randomly.
 
@@ -190,9 +190,9 @@ Place the Speak block next to the Integration block and connect it to the Integr
 
 Set the Speak block as follows.
 
-`` `
+```
 Sorry, an error has occurred. Please use again after a while.
-`` `
+```
 
 Now, if an error occurs when linking with Google Spreadsheet, this Speak block will be executed.
 
@@ -206,9 +206,9 @@ Since we need to receive the user's utterance, we will change the flow slightly.
 
 ![](images/chapxx-kun432/s071.png)
 
-`` `
+```
 Welcome to our recipe skills. With this skill, you can ask the name of the ingredients by saying the name of the recipe. For example, say, "I want to know hamburger recipes."
-`` `
+```
 
 Add a Choice block and a Speak block between the first Speak block and the Integration block, and connect them as shown below.
 
@@ -218,11 +218,11 @@ Add a Choice block and a Speak block between the first Speak block and the Integ
 \ clearpage
 //}
 
-Let's make intent / sample utterance / slot. Click the Choice block to create an intent first. Enter `` `ask_recipe_intent` in the" Name new intent or selecting existing intent "and click" Create ". This will be the intent name.
+Let's make intent / sample utterance / slot. Click the Choice block to create an intent first. Enter ```ask_recipe_intent` in the" Name new intent or selecting existing intent "and click" Create ". This will be the intent name.
 
 ![](images/chapxx-kun432/s073.png)
 
-A new section called Utterances appears. Register the sample utterance here. In the "What might the user say to invoke this intent?" Field, enter `` `I want to know the recipe for slot_recipe_name```. Don't forget to put a space between `` `slot_recipe_name``` and` `` I want to know the recipe```.
+A new section called Utterances appears. Register the sample utterance here. In the "What might the user say to invoke this intent?" Field, enter ```I want to know the recipe for slot_recipe_name```. Don't forget to put a space between ```slot_recipe_name``` and``` I want to know the recipe```.
 
 ![](images/chapxx-kun432/s111.png)
 
@@ -230,11 +230,11 @@ A new section called Utterances appears. Register the sample utterance here. In 
 \ clearpage
 //}
 
-Next, select the `` `slot_recipe_name``` part with the cursor, and it will be displayed as follows. Click" Create ".
+Next, select the ```slot_recipe_name``` part with the cursor, and it will be displayed as follows. Click" Create ".
 
 ![](images/chapxx-kun432/s112.png)
 
-The slot creation screen is displayed. `` `Slot_recipe_name``` selected earlier will be the slot name. Select “Food” for Slot Type and choose your favorite color for Slot Color. Finally, click "Create Slot". You have now created a slot.
+The slot creation screen is displayed. ```Slot_recipe_name``` selected earlier will be the slot name. Select “Food” for Slot Type and choose your favorite color for Slot Color. Finally, click "Create Slot". You have now created a slot.
 
 ![](images/chapxx-kun432/s113.png)
 
@@ -242,11 +242,11 @@ The slot creation screen is displayed. `` `Slot_recipe_name``` selected earlier 
 \ clearpage
 //}
 
-When you return to the Choice block setting screen, the sample utterance `` `slot_recipe_name``` has changed to the specified color. In this way, sample utterances including slots are created. Finally, don't forget to click the ENTER key to register as a sample utterance.
+When you return to the Choice block setting screen, the sample utterance ```slot_recipe_name``` has changed to the specified color. In this way, sample utterances including slots are created. Finally, don't forget to click the ENTER key to register as a sample utterance.
 
 ![](images/chapxx-kun432/s114.png)
 
-If the sample utterance above is displayed below the input field, the sample utterance has been registered. Next, let's add a variation of the sample utterance. `` `Please tell me the recipe of slot_recipe_name` and enter` ``.
+If the sample utterance above is displayed below the input field, the sample utterance has been registered. Next, let's add a variation of the sample utterance. ```Please tell me the recipe of slot_recipe_name` and enter```.
 
 ![](images/chapxx-kun432/s115.png)
 
@@ -254,16 +254,16 @@ If the sample utterance above is displayed below the input field, the sample utt
 \ clearpage
 //}
 
-As before, select `` `slot_recipe_name``` with the cursor. `` `Slot_recipe_name``` is already registered, so just select it from the list.
+As before, select ```slot_recipe_name``` with the cursor. ```Slot_recipe_name``` is already registered, so just select it from the list.
 
 ![](images/chapxx-kun432/s116.png)
 
-It is also possible to select a slot by inputting `` `{` `` when inputting a sample utterance, and then continue inputting. Register some sample utterances in your preferred way.
+It is also possible to select a slot by inputting ```{``` when inputting a sample utterance, and then continue inputting. Register some sample utterances in your preferred way.
 
 ![](images/chapxx-kun432/s117.png)
 
 
-`` `
+```
 Sample utterance example:
 
 I want to know the ingredients of {slot_recipe_name}
@@ -271,7 +271,7 @@ Tell me the ingredients for {slot_recipe_name}
 {slot_recipe_name} recipe
 {slot_recipe_name} ingredients
 {slot_recipe_name}
-`` `
+```
 
 // embed [latex] {
 \ clearpage
@@ -287,9 +287,9 @@ The above Speak block is used to listen again if an utterance that does not corr
 
 Make the following entries:
 
-`` `
+```
 I'm sorry, I didn't hear well. For example, say "I want to know hamburger recipes".
-`` `
+```
 
 // embed [latex] {
 \ clearpage
@@ -301,7 +301,7 @@ You are ready to receive user utterances as search criteria. Let's search the sp
 
 ![](images/chapxx-kun432/s080.png)
 
-In the case of random, left side "Row Number" was selected, right side "Value to Match" was empty. Select "recipe \ _name" on the left and `` `{slot_recipe_name}` `` on the right, as shown below. This means that you can search by specifying what you spoke with the variable `` `slot_recipe_name``` in the" recipe \ _name "column. Click “Next”.
+In the case of random, left side "Row Number" was selected, right side "Value to Match" was empty. Select "recipe \ _name" on the left and ```{slot_recipe_name}``` on the right, as shown below. This means that you can search by specifying what you spoke with the variable ```slot_recipe_name``` in the" recipe \ _name "column. Click “Next”.
 
 ![](images/chapxx-kun432/s082.png)
 
@@ -313,7 +313,7 @@ Click Next for Mapping Output, go to Test Integration, and click Test Integratio
 
 ![](images/chapxx-kun432/s083.png)
 
-A screen different from the random case came out. Enter "curry rice" in `` `slot_user_recipe``` and click" Run ".
+A screen different from the random case came out. Enter "curry rice" in ```slot_user_recipe``` and click" Run ".
 
 ![](images/chapxx-kun432/s085.png)
 
@@ -339,7 +339,7 @@ Continuing from the previous test, try this time with a recipe name that is not 
 
 ![](images/chapxx-kun432/s089.png)
 
-`` `undefined``` means" nothing defined ". Not surprisingly, Alexa wouldn't return such an answer, as we tried to find a recipe name that wasn't in the recipe data. Let's fix it a little.
+```undefined``` means" nothing defined ". Not surprisingly, Alexa wouldn't return such an answer, as we tried to find a recipe name that wasn't in the recipe data. Let's fix it a little.
 
 Delete the line of the Integration block and the line of the Speak block (the one that is not fail) when the Integration block succeeds, and place an If block under Logic in the Block menu to connect it. Set the Speak block aside a little.
 
@@ -353,7 +353,7 @@ The If block is a block that specifies a condition and branches the processing f
 
 ![](images/chapxx-kun432/s091.png)
 
-Let's set the conditions. Simply thinking, the variable `` `varName` '' or the variable` `` varContent` '' containing the data obtained from the spreadsheet is `` `undefined` '', so use the equal I think it should be compared. However, this `` `undefined``` is a little special programmatically, and it does not work even if it is set as follows.
+Let's set the conditions. Simply thinking, the variable ```varName` '' or the variable``` varContent` '' containing the data obtained from the spreadsheet is ```undefined` '', so use the equal I think it should be compared. However, this ```undefined``` is a little special programmatically, and it does not work even if it is set as follows.
 
 ![](images/chapxx-kun432/s092.png)
 
@@ -361,11 +361,11 @@ Let's set the conditions. Simply thinking, the variable `` `varName` '' or the v
 \ clearpage
 //}
 
-So, twist it a little and try not to judge whether it is `` `undefined```, but to judge whether the search result is done properly. First, select "` `slot_user_recipe``` for" Select Variable "at the top.
+So, twist it a little and try not to judge whether it is ```undefined```, but to judge whether the search result is done properly. First, select "` `slot_user_recipe``` for" Select Variable "at the top.
 
 ![](images/chapxx-kun432/s098.png)
 
-Next, as for "Value" on the lower side, in the initial state, you can only enter the value directly and you can not select the variable. Then, click the `` `</>` `` icon on the far right. Then a menu is displayed. Click "Variable".
+Next, as for "Value" on the lower side, in the initial state, you can only enter the value directly and you can not select the variable. Then, click the ```</>``` icon on the far right. Then a menu is displayed. Click "Variable".
 
 ![](images/chapxx-kun432/s094.png)
 
@@ -373,11 +373,11 @@ Next, as for "Value" on the lower side, in the initial state, you can only enter
 \ clearpage
 //}
 
-Then, the lower side also changes to "Select Variable", so select `` `varName```.
+Then, the lower side also changes to "Select Variable", so select ```varName```.
 
 ![](images/chapxx-kun432/s096.png)
 
-In other words, the check is that if the recipe name spoken by the user (`` `slot_user_recipe```) = the recipe name obtained from the spreadsheet (` `` varName```), the search results could be obtained. . If this condition is met, the flow branches to "1". Otherwise, that is, to the flow "else" if it cannot be acquired, the flow branches.
+In other words, the check is that if the recipe name spoken by the user (```slot_user_recipe```) = the recipe name obtained from the spreadsheet (``` varName```), the search results could be obtained. . If this condition is met, the flow branches to "1". Otherwise, that is, to the flow "else" if it cannot be acquired, the flow branches.
 
 ![](images/chapxx-kun432/s097.png)
 

@@ -173,9 +173,9 @@ The sound library is released by each vendor as sound effects for skills and can
 In the example, if you answer "OK" to the question "Are you ready?", The sound effect is played using the audio file provided by the vendor.
 Enter the `audio` tag in the" speak "block. For Alexa skills, you can copy and paste the tags in the sound library, so you can copy and paste them.
 
-`` `
+```
 <audio src = "soundbank: // soundlibrary / ui / gameshow / amzn_ui_sfx_gameshow_positive_response_01" />
-`` `
+```
 
 ![Utterance and block](images/chapxx-magistralla/suzu05.png)
 
@@ -198,9 +198,9 @@ Speechcon is a special word that the assistant speaks expressively.
 In the example, the first greeting the "Hello" to the speech using the Speechcon.
 Enter `say-as` tag and attribute` interpret-as = "interjection" `in" speak "block.
 
-`` `
+```
 <Say-as interpret-as = "interjection"> Hello </ say-as>
-`` `
+```
 
 ![Utterance and block](images/chapxx-magistralla/suzu06.png)
 

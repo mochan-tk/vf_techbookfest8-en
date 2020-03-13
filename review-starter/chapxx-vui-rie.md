@@ -453,12 +453,12 @@ Quote the official description.
 
 > To use these sounds in your skill, include the Speech Synthesis Markup Language (SSML) <audio> tag in the response. Enclose the SSML response in <speak> tags, as in the following example:
 
-`` `
+```
 <speak>
   This is Alexa's normal voice. Play the sound effects bear growl (1).
   <audio src = "soundbank: // soundlibrary / animals / amzn_sfx_bear_groan_roar_01" />
 </ speak>
-`` `
+```
 
 As of January 2020, there are over 3,000 sound effects.
 

@@ -235,7 +235,7 @@ Enter a policy name. `Voiceflow-AmazonConnect-Policy`. Click the Create Policy b
 Open index.js. Delete all existing sources and copy and paste the following program.
 Since the request comes from Voiceflow, get the target value from body.
 
-`` `javascript
+```javascript
 const Util = require ('./ util.js');
 
 exports.handler = async (event) => {
@@ -257,7 +257,7 @@ exports.handler = async (event) => {
 
     return response;
 };
-`` `
+```
 
 Create a new file.
 
@@ -265,7 +265,7 @@ Create a new file.
 
 Copy and paste the code below.
 
-`` `javascript
+```javascript
 'use strict';
 const AWS = require ('aws-sdk');
 var connect = new AWS.Connect ();
@@ -294,7 +294,7 @@ module.exports.callMessageAction = async function callMessageAction (message) {
         });
     }));
 };
-`` `
+```
 
 When saving, change the file name to `util.js`.
 
@@ -346,9 +346,9 @@ Enter a project name. In this case, it is `VoiceflowBMI`. Uncheck English and ch
 
 Drag and drop the `Speak` block and enter the words you want Alexa to speak. First, I want to ask the user's height, so enter "Measure BMI. Please answer height in centimeters."
 
-`` `
+```
 Measure BMI. Please answer your height in centimeters.
-`` `
+```
 
 ![Register words to get your height answered](images/chapxx-gaomar/s202.png)
 
@@ -365,9 +365,9 @@ Drag and drop the `Capture` block in the Logic category. Connect it to the `Spea
 
 Drag and drop the `Speak` block and connect it with a line. Next, I want to ask for my weight, so type "Please give your weight in kilograms."
 
-`` `
+```
 Then please give your weight in kilograms.
-`` `
+```
 
 ![Register words to get your weight answered](images/chapxx-gaomar/s206.png)
 
@@ -391,9 +391,9 @@ Drag and drop the `Speak` block and connect the top of the Integrations block wi
 
 Enter the text when an error occurs on the API Gateway or Lambda side.
 
-`` `
+```
 An error has occurred.
-`` `
+```
 
 ![Enter the text at the time of error](images/chapxx-gaomar/s210.png)
 
