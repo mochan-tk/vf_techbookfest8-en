@@ -42,7 +42,7 @@ In addition, the infrared transmission distance of the infrared transmitter / re
 
 I think that Google Home mini was bought at a discount sale for about 3000 yen. Now it's renamed Google Nest Mini. Even if it is not Google Home mini, the Nest series is OK, and if you do not have a real machine, you can also use the iPhone or Android ```Google Assistant application```.
 
-// footnote [sitopp_prices] [Price of M5StickC and infrared transceiver is the tax-included price as of January 12, 2020 on the switch science mail order site. ]
+//footnote[sitopp_prices][Price of M5StickC and infrared transceiver is the tax-included price as of January 12, 2020 on the switch science mail order site. ]
 
 
 ![Parts used](images/chapxx-sitopp/sito_002.png)
@@ -66,7 +66,7 @@ Install Arduino IDE. Skip those who are already using it.
 * Expand the downloaded zip file and the application "Arduino.app" will appear. Move to the application folder.
 
 
-// footnote [sitopp_donate] [If you want to support their activities, please donate (＾ o ＾)]
+//footnote[sitopp_donate][If you want to support their activities, please donate (＾ o ＾)]
 
 * Start Arduino IDE.
 * The editor "sketch_date" opens, but closes without saving because it is not used now.
@@ -178,7 +178,7 @@ Example) The command pattern of infrared rays when pressing OFF and ON once each
 The command pattern of the infrared remote control is not unified among manufacturers, and the format is different.
 This book explains how to use Daikin's air conditioner. @ <fn> {sitopp_maker}
 
-// footnote [sitopp_maker] [About maker other than Daikin, there was a page that kindly explained variously when googled, so I introduced it in the section "In case of maker other than Daikin". Please refer to it. ]
+//footnote[sitopp_maker][About maker other than Daikin, there was a page that kindly explained variously when googled, so I introduced it in the section "In case of maker other than Daikin". Please refer to it. ]
 
 
 * Enter "Tools"-> "Include Libraries"-> "Manage Libraries"-> "IRsend" of Arduino IDE.
@@ -387,7 +387,7 @@ If you are new to Voiceflow, please go through "1.2 How to Use Voiceflow" at the
 * In this article, the Actions name is "Shoinji". @ <fn> {sitopp_actionsname}
 
 
-// footnote [sitopp_actionsname] [Actions name is not public, so anything is fine. This year's M-1 Pokopo was interesting, so I'll use it in this article. Please replace it with your favorite name. ]
+//footnote[sitopp_actionsname][Actions name is not public, so anything is fine. This year's M-1 Pokopo was interesting, so I'll use it in this article. Please replace it with your favorite name. ]
 
 
 * Check "Japanese" on the Select Regions screen and uncheck "English (US)".
@@ -438,7 +438,7 @@ Similarly, make a part to turn off the air conditioner.
 * Similarly, enter "Turn off the air conditioner" and enter.
 * Click the margin in the center editor to close the editing window in the right pane.
 
-// footnote [sitopp_danbo] [I thought it would be nice to add a cooler when thinking of summer, but please forgive me because the room was cold and it wasn't right. ]
+//footnote[sitopp_danbo][I thought it would be nice to add a cooler when thinking of summer, but please forgive me because the room was cold and it wasn't right. ]
 
 
 #### Parameter declaration

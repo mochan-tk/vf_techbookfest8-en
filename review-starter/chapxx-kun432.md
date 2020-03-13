@@ -24,14 +24,14 @@ Next, create the following project on the Voiceflow side and place the blocks.
 - Once the project is created, place one Speak block and connect it with the Start of the Home block with a line.
 - Set the Speak block as follows.
 
-// list [] [] {
-Welcome to our recipe skills. This skill will teach you a random recipe. Today ’s recommendation is <audio src = "soundbank: // soundlibrary / ui / gameshow / amzn \ _ui \ _sfx \ _gameshow \ _intro \ _01" />
+//list[][]{
+Welcome to our recipe skills. This skill will teach you a random recipe. Today ’s recommendation is <audio src="soundbank://soundlibrary/ui/gameshow/amzn\_ui\_sfx\_gameshow\_intro\_01"/>
 //}
 
 By the way, the last ```<audio src = ~``` part uses "Alexa Skills Kit sound library" to play sound effects.
 
-// note [Alexa Skills Kit sound library] {
-@ <href> {https://developer.amazon.com/ja-JP/docs/alexa/custom-skills/ask-soundlibrary.html}
+//note[Alexa Skills Kit sound library]{
+@<href>{https://developer.amazon.com/ja-JP/docs/alexa/custom-skills/ask-soundlibrary.html}
 //}
 
 //embed[latex]{
@@ -116,7 +116,7 @@ Create variables from the "Variables Menu". Click the icon at the bottom of the 
 
 ![](images/chapxx-kun432/s016-2.png)
 
-If ```varName``` is displayed at the end of``` sessions``` etc. displayed just below the input field, the variable has been successfully created. Similarly, create a variable called ```varContent```.
+If ```varName``` is displayed at the end of ```sessions``` etc. displayed just below the input field, the variable has been successfully created. Similarly, create a variable called ```varContent```.
 
 ![](images/chapxx-kun432/s039.png)
 
@@ -148,11 +148,11 @@ Click "+ Add Mapping" to select "Column" and "Variable" respectively. Specify th
 \clearpage
 //}
 
-Now, let's link. Select ```recipe_name``` for" Column "and``` varName``` for "Variable".
+Now, let's link. Select ```recipe_name``` for "Column" and ```varName``` for "Variable".
 
 ![](images/chapxx-kun432/s024-2.png)
 
-The data in the ```recipe_name``` column of the spreadsheet is now in the variable``` varName```. Similarly, associate the ```recipe_content``` column with the variable``` varContent```. Click "+ Add Mapping" to add the settings in the same way.
+The data in the ```recipe_name``` column of the spreadsheet is now in the variable ```varName```. Similarly, associate the ```recipe_content``` column with the variable ```varContent```. Click "+ Add Mapping" to add the settings in the same way.
 
 It is OK if both can be linked and look like this. Click Next to return to the canvas.
 
@@ -218,11 +218,11 @@ Add a Choice block and a Speak block between the first Speak block and the Integ
 \clearpage
 //}
 
-Let's make intent / sample utterance / slot. Click the Choice block to create an intent first. Enter ```ask_recipe_intent` in the" Name new intent or selecting existing intent "and click" Create ". This will be the intent name.
+Let's make intent / sample utterance / slot. Click the Choice block to create an intent first. Enter ```ask_recipe_intent``` in the "Name new intent or selecting existing intent" and click "Create". This will be the intent name.
 
 ![](images/chapxx-kun432/s073.png)
 
-A new section called Utterances appears. Register the sample utterance here. In the "What might the user say to invoke this intent?" Field, enter ```I want to know the recipe for slot_recipe_name```. Don't forget to put a space between ```slot_recipe_name``` and``` I want to know the recipe```.
+A new section called Utterances appears. Register the sample utterance here. In the "What might the user say to invoke this intent?" Field, enter ```I want to know the recipe for slot_recipe_name```. Don't forget to put a space between ```slot_recipe_name``` and ```I want to know the recipe```.
 
 ![](images/chapxx-kun432/s111.png)
 
@@ -230,7 +230,7 @@ A new section called Utterances appears. Register the sample utterance here. In 
 \clearpage
 //}
 
-Next, select the ```slot_recipe_name``` part with the cursor, and it will be displayed as follows. Click" Create ".
+Next, select the ```slot_recipe_name``` part with the cursor, and it will be displayed as follows. Click "Create".
 
 ![](images/chapxx-kun432/s112.png)
 
@@ -339,7 +339,7 @@ Continuing from the previous test, try this time with a recipe name that is not 
 
 ![](images/chapxx-kun432/s089.png)
 
-```undefined``` means" nothing defined ". Not surprisingly, Alexa wouldn't return such an answer, as we tried to find a recipe name that wasn't in the recipe data. Let's fix it a little.
+```undefined``` means "nothing defined". Not surprisingly, Alexa wouldn't return such an answer, as we tried to find a recipe name that wasn't in the recipe data. Let's fix it a little.
 
 Delete the line of the Integration block and the line of the Speak block (the one that is not fail) when the Integration block succeeds, and place an If block under Logic in the Block menu to connect it. Set the Speak block aside a little.
 
@@ -353,7 +353,7 @@ The If block is a block that specifies a condition and branches the processing f
 
 ![](images/chapxx-kun432/s091.png)
 
-Let's set the conditions. Simply thinking, the variable ```varName` '' or the variable``` varContent` '' containing the data obtained from the spreadsheet is ```undefined` '', so use the equal I think it should be compared. However, this ```undefined``` is a little special programmatically, and it does not work even if it is set as follows.
+Let's set the conditions. Simply thinking, the variable ```varName``` or the variable ``` varContent``` containing the data obtained from the spreadsheet is ```undefined```, so use the equal I think it should be compared. However, this ```undefined``` is a little special programmatically, and it does not work even if it is set as follows.
 
 ![](images/chapxx-kun432/s092.png)
 
@@ -361,7 +361,7 @@ Let's set the conditions. Simply thinking, the variable ```varName` '' or the va
 \clearpage
 //}
 
-So, twist it a little and try not to judge whether it is ```undefined```, but to judge whether the search result is done properly. First, select "` `slot_user_recipe``` for" Select Variable "at the top.
+So, twist it a little and try not to judge whether it is ```undefined```, but to judge whether the search result is done properly. First, select "` `slot_user_recipe``` for "Select Variable" at the top.
 
 ![](images/chapxx-kun432/s098.png)
 
@@ -377,7 +377,7 @@ Then, the lower side also changes to "Select Variable", so select ```varName```.
 
 ![](images/chapxx-kun432/s096.png)
 
-In other words, the check is that if the recipe name spoken by the user (```slot_user_recipe```) = the recipe name obtained from the spreadsheet (``` varName```), the search results could be obtained. . If this condition is met, the flow branches to "1". Otherwise, that is, to the flow "else" if it cannot be acquired, the flow branches.
+In other words, the check is that if the recipe name spoken by the user (```slot_user_recipe```) = the recipe name obtained from the spreadsheet (```varName```), the search results could be obtained. . If this condition is met, the flow branches to "1". Otherwise, that is, to the flow "else" if it cannot be acquired, the flow branches.
 
 ![](images/chapxx-kun432/s097.png)
 
@@ -401,7 +401,7 @@ Finally, test it on the Alexa developer console, and if you can speak out if you
 
 ![](images/chapxx-kun432/s102.png)
 
-// note [judgment of undefined] {
+//note[judgment of undefined] {
 Of course you can also determine undefind straight. Voiceflow's If block has a description method called Advanced Expression, which can be determined by programmatic writing. If you are used to programming, this may be easier to understand. See also the official documentation. @<br>{}
 
 Advanced expression (IF and SET blocks)-Voiceflow Docs @<br>{}
@@ -423,12 +423,12 @@ It is easy and convenient to use Google Spreadsheets, but it has some weaknesses
 
 If you meet the above restrictions or are not functional enough with Google Spreadsheets, we recommend using a full-fledged database such as Airtable or Firebase.
 
-- Airtable (@ <href> {https://airtable.com/})
-- Firebase (@ <href> {https://firebase.google.com/})
+- Airtable (@<href>{https://airtable.com/})
+- Firebase (@<href>{https://firebase.google.com/})
 
 ## Finally
 
 What do you think. When you read data using Google Spreadsheets, you get a database-like atmosphere. This time, only the data reference was introduced for the convenience of the magazine, but of course it is also possible to register / update / delete the data in the spreadsheet. For more information, see the following site. Also, besides Google Spreadsheet integration, there are many Voiceflow tips, so please take a look. @<br>{}
 
 - Voiceflow Summer Holiday Advent Calendar @<br>{}
-@ <href> {https://qiita.com/kun432/items/666ae13f097004ea7935}
+@<href>{https://qiita.com/kun432/items/666ae13f097004ea7935}

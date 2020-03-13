@@ -5,7 +5,7 @@ For beginners who want to use Voiceflow, it is a chapter where you can learn "Wh
 
 ### About Voiceflow
 This service allows you to design and create voice applications (Alexa skills, Google actions, etc.) without coding. Even beginners can easily start using visual programming that is easy to understand visually.
-// blankline
+//blankline
 [https://www.voiceflow.com/](https://www.voiceflow.com/)
 ![What is Voiceflow](images/chapxx-mr-mo/vf1_2.png)
 
@@ -85,7 +85,7 @@ This section describes how to create an account, how to create a voice applicati
 ### Create an account
 Open the following URL and click the "Sign Up" button on the upper right.
 [https://www.voiceflow.com/](https://www.voiceflow.com/)
-// blankline
+//blankline
 Enter your name, email address and password to sign up.
 Voiceflow allows you to socially log in with "Google" and "Facebook", so users can sign up from there. After that, you can use it by answering some questionnaires.
 ![Create Account](images/chapxx-mr-mo/vf4.png)
