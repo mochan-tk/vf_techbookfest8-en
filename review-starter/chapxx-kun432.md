@@ -198,7 +198,7 @@ Now, if an error occurs when linking with Google Spreadsheet, this Speak block w
 
 ## Get spreadsheet data by specifying conditions.
 
-Next, let's search by specifying conditions. Ask the user which recipe they want to know, receive the utterance, and search the spreadsheet. @ <br> {}
+Next, let's search by specifying conditions. Ask the user which recipe they want to know, receive the utterance, and search the spreadsheet. @<br>{}
 
 ### Receive user utterances as search criteria
 
@@ -402,9 +402,9 @@ Finally, test it on the Alexa developer console, and if you can speak out if you
 ![](images/chapxx-kun432/s102.png)
 
 // note [judgment of undefined] {
-Of course you can also determine undefind straight. Voiceflow's If block has a description method called Advanced Expression, which can be determined by programmatic writing. If you are used to programming, this may be easier to understand. See also the official documentation. @ <br> {}
+Of course you can also determine undefind straight. Voiceflow's If block has a description method called Advanced Expression, which can be determined by programmatic writing. If you are used to programming, this may be easier to understand. See also the official documentation. @<br>{}
 
-Advanced expression (IF and SET blocks)-Voiceflow Docs @ <br> {}
+Advanced expression (IF and SET blocks)-Voiceflow Docs @<br>{}
 @ <href> {https://docs.voiceflow.com/voiceflow-documentation/logic-in-voiceflow/advanced-expression-if-and-set-blocks}
 //}
 
@@ -428,7 +428,7 @@ If you meet the above restrictions or are not functional enough with Google Spre
 
 ## Finally
 
-What do you think. When you read data using Google Spreadsheets, you get a database-like atmosphere. This time, only the data reference was introduced for the convenience of the magazine, but of course it is also possible to register / update / delete the data in the spreadsheet. For more information, see the following site. Also, besides Google Spreadsheet integration, there are many Voiceflow tips, so please take a look. @ <br> {}
+What do you think. When you read data using Google Spreadsheets, you get a database-like atmosphere. This time, only the data reference was introduced for the convenience of the magazine, but of course it is also possible to register / update / delete the data in the spreadsheet. For more information, see the following site. Also, besides Google Spreadsheet integration, there are many Voiceflow tips, so please take a look. @<br>{}
 
-- Voiceflow Summer Holiday Advent Calendar @ <br> {}
+- Voiceflow Summer Holiday Advent Calendar @<br>{}
 @ <href> {https://qiita.com/kun432/items/666ae13f097004ea7935}

@@ -1,8 +1,8 @@
 # Create your own smart remote with M5StickC and control home appliances from Google Home
 
 Ito. I wrote this chapter to make it easier for people in the electronic work cluster to know "how to attach a voice operation interface easily".
-Or, if you're a VUI cluster member, it's super fun if you haven't done so yet, `````@ <br> {}
-This time, we use the popular low-priced microcontroller "M5StickC". There is no worry about electric shock because it is not in the exposed ```board` '' but in the case. @ <br> {}
+Or, if you're a VUI cluster member, it's super fun if you haven't done so yet, `````@<br>{}
+This time, we use the popular low-priced microcontroller "M5StickC". There is no worry about electric shock because it is not in the exposed ```board` '' but in the case. @<br>{}
 Voiceflow supports both Google Home and Amazon Echo, so use whichever you have. A smartphone app is also OK.
 In addition to Voiceflow, we have a collection of techniques that can be used for IoT prototyping, such as MQTT and IFTTT, so we hope you find some hints.
 
@@ -264,16 +264,16 @@ https://GitHub.com/crankyoldgit/IRremoteESP8266
 
 However, this is not clear enough, so here are a few helpful blogs that are very helpful.
 
-* Use infrared remote control with M5StickC (NEC example) Masayuki Tanaka @ <br> {}
+* Use infrared remote control with M5StickC (NEC example) Masayuki Tanaka @<br>{}
 https://lang-ship.com/blog/?p=886
 
-* Make a home appliance remote control that can be operated from a smartphone with M5StickC (NEC example) @ elchika @ <br> {}
+* Make a home appliance remote control that can be operated from a smartphone with M5StickC (NEC example) @ elchika @<br>{}
 https://elchika.com/article/218f5072-28a6-461c-a801-43390305f4cc/
 
-* Make infrared remote control with M5Stick-C (Fujitsu example) @ poruruba @ <br> {}
+* Make infrared remote control with M5Stick-C (Fujitsu example) @ poruruba @<br>{}
 https://qiita.com/poruruba/items/34220a4dd6aaf48392aa
 
-* I transmitted and received infrared remote control data with M5StickC. (Example of Panasonic) RESEARCHER @ <br> {}
+* I transmitted and received infrared remote control data with M5StickC. (Example of Panasonic) RESEARCHER @<br>{}
 https://lab.sasapea.mydns.jp/2019/06/28/m5stickc-ir/
 
 
@@ -369,7 +369,7 @@ It will be called from Voiceflow later, so let's check it out.
 * Access IFTTT's "My Services" on Chrome. ```https: // ifttt.com / my_services```
 * Open "Webhooks" → "Documentation".
 * Enter "``` M5StickCIRRemoCon``` "in the URL``` {event} ```under" `` Make a POST or GET Web request to``` ".
-* Copy the URL starting with ```https: //``` and write it down in Notepad. @ <br> {}
+* Copy the URL starting with ```https: //``` and write it down in Notepad. @<br>{}
 Example) URL: https://maker.ifttt.com/trigger/M5StickCIRRemoCon/with/key/ (Omitted)
 
 ![Webhooks URL](images/chapxx-sitopp/sito_028.png)
@@ -400,32 +400,32 @@ From here on, I will explain in detail with screenshots.
 
 ![](images/chapxx-sitopp/sito_030_1.png)
 
-This is the basic usage of Speak block. @ <br> {}
-(1) Slide the "Alexa Google" switch on the header to "Google". @ <br> {}
-Confirm that the "Upload to Alexa" button changes to "Upload to Google". @ <br> {}
-(2) Click “``` ▶ ︎Basic``` ”in the“ Blocks ”menu to open it. @ <br> {}
-(3) Click "Speak" and drag it to the right margin of the block marked "Home". @ <br> {}
-(4) Draw a line from the right end of the “Start” line of the Home block and connect it to the left side of the Speak block. @ <br> {}
-(5) Click the Speak block, and the input field will pop out from the right, so click the second largest character "Speak" from the top and overwrite it with "``` Speak_Guidance``` ". @ <br> {}
-(6) Enter "Please turn on the air conditioner or turn off the air conditioner" in the entry field under "System Says". @ <br> {}
-(7) Click the margin in the center editor to close and save the editing window in the right pane. @ <br> {}
+This is the basic usage of Speak block. @<br>{}
+(1) Slide the "Alexa Google" switch on the header to "Google". @<br>{}
+Confirm that the "Upload to Alexa" button changes to "Upload to Google". @<br>{}
+(2) Click “``` ▶ ︎Basic``` ”in the“ Blocks ”menu to open it. @<br>{}
+(3) Click "Speak" and drag it to the right margin of the block marked "Home". @<br>{}
+(4) Draw a line from the right end of the “Start” line of the Home block and connect it to the left side of the Speak block. @<br>{}
+(5) Click the Speak block, and the input field will pop out from the right, so click the second largest character "Speak" from the top and overwrite it with "``` Speak_Guidance``` ". @<br>{}
+(6) Enter "Please turn on the air conditioner or turn off the air conditioner" in the entry field under "System Says". @<br>{}
+(7) Click the margin in the center editor to close and save the editing window in the right pane. @<br>{}
 
 
 #### Creating Intent Block to Pick Up Utterance
 
 ![](images/chapxx-sitopp/sito_030_2.png)
 
-A block to turn on the air conditioner and pick up utterances. I will make them together for each meaning. @ <br> {}
-(1) Click “``` ▶ ︎Basic``` ”in the“ Blocks ”menu to open it, and drag“ Intent ”under“ ```Speak_Guidance```”. @ <br> {}
-(2) When you click the Intent block, the input field pops out from the right, so click the second big descriptive character from the top, `` Intent '' and overwrite `````Intent_ attach air conditioner``` '' . @ <br> {}
-(3) Click “Name new intent or select existing intent”. @ <br> {}
-Click "Name new intent", enter "` "aircon_on```", and click "Create". @ <br> {}
-(4) Click “What might the user say to invoke this intent?” Under “Utterances” and enter “Turn on” and enter. @ <br> {} @ <fn> {sitopp_danbo}
-Click "Add Synonyms of the user response", enter "Turn on heating" and enter. @ <br> {}
-Enter "Turn on the air conditioner" and enter. @ <br> {}
-Enter "Turn on the air conditioner" and enter. @ <br> {}
-(5) Click the margin in the center editor and close the editing window in the right pane. @ <br> {}
-Note) The left side to the Intent block does not connect the line from anywhere. @ <br> {}
+A block to turn on the air conditioner and pick up utterances. I will make them together for each meaning. @<br>{}
+(1) Click “``` ▶ ︎Basic``` ”in the“ Blocks ”menu to open it, and drag“ Intent ”under“ ```Speak_Guidance```”. @<br>{}
+(2) When you click the Intent block, the input field pops out from the right, so click the second big descriptive character from the top, `` Intent '' and overwrite `````Intent_ attach air conditioner``` '' . @<br>{}
+(3) Click “Name new intent or select existing intent”. @<br>{}
+Click "Name new intent", enter "` "aircon_on```", and click "Create". @<br>{}
+(4) Click “What might the user say to invoke this intent?” Under “Utterances” and enter “Turn on” and enter. @<br>{} @ <fn> {sitopp_danbo}
+Click "Add Synonyms of the user response", enter "Turn on heating" and enter. @<br>{}
+Enter "Turn on the air conditioner" and enter. @<br>{}
+Enter "Turn on the air conditioner" and enter. @<br>{}
+(5) Click the margin in the center editor and close the editing window in the right pane. @<br>{}
+Note) The left side to the Intent block does not connect the line from anywhere. @<br>{}
 
 Similarly, make a part to turn off the air conditioner.
 
@@ -445,25 +445,25 @@ Similarly, make a part to turn off the air conditioner.
 
 ![](images/chapxx-sitopp/sito_030_3.png)
 
-To make the flow cleaner, we will use parameters. @ <br> {}
-(1) Click the third icon "Variables" from the top of the ultra-thin pane on the left of the Design screen. @ <br> {}
-(2) Enter “device” in the “Create Variable (Project)” input field and enter. @ <br> {}
-(3) "``` {device} ```" is added at the end of the Variables list. @ <br> {}
-(4) Add ```{onoff}``` as well. @ <br> {}
+To make the flow cleaner, we will use parameters. @<br>{}
+(1) Click the third icon "Variables" from the top of the ultra-thin pane on the left of the Design screen. @<br>{}
+(2) Enter “device” in the “Create Variable (Project)” input field and enter. @<br>{}
+(3) "``` {device} ```" is added at the end of the Variables list. @<br>{}
+(4) Add ```{onoff}``` as well. @<br>{}
 
 #### Creating a set block to route parameters
 
 ![](images/chapxx-sitopp/sito_030_4.png)
 
-The Set block can set parameters. @ <br> {}
-(1) Click the icon “Blocks” at the top of the ultra-thin pane on the left of the Design screen. @ <br> {}
-(2) Drag the “▶ ︎Logic” → “Set” block to the right of “``` Intent_ Turn on the air conditioner``` ”. @ <br> {}
-(3) Connect a line from the right side of "``` Intent_Turn on air conditioner``` ". @ <br> {}
-(4) Click the set block to display the edit field, click the second largest character "Set" from the top and overwrite it with "``` SetParam_aircon_on``` ". @ <br> {}
-(5) Click the “Select Valiable” option and specify “device” at the bottom of the list. @ <br> {}
-(6) Enter “aircon” in “Value”. @ <br> {}
-(7) Click “Add Set” to add a second input field. @ <br> {}
-(8) Specify “onoff” for “Select Valiable” and enter “on” for “Value”. @ <br> {}
+The Set block can set parameters. @<br>{}
+(1) Click the icon “Blocks” at the top of the ultra-thin pane on the left of the Design screen. @<br>{}
+(2) Drag the “▶ ︎Logic” → “Set” block to the right of “``` Intent_ Turn on the air conditioner``` ”. @<br>{}
+(3) Connect a line from the right side of "``` Intent_Turn on air conditioner``` ". @<br>{}
+(4) Click the set block to display the edit field, click the second largest character "Set" from the top and overwrite it with "``` SetParam_aircon_on``` ". @<br>{}
+(5) Click the “Select Valiable” option and specify “device” at the bottom of the list. @<br>{}
+(6) Enter “aircon” in “Value”. @<br>{}
+(7) Click “Add Set” to add a second input field. @<br>{}
+(8) Specify “onoff” for “Select Valiable” and enter “on” for “Value”. @<br>{}
 
 Similarly, make a Set block to turn off the air conditioner.
 
@@ -477,34 +477,34 @@ Similarly, make a Set block to turn off the air conditioner.
 
 ![](images/chapxx-sitopp/sito_030_5.png)
 
-Integrations block can be linked with API and GoogleSheet. @ <br> {}
-(1) Drag “▶ ︎Advanced” → “Integrations” to the right of “``` SetParam_aircon_on``` ”. @ <br> {}
-(2) Put out a line from the right side of "``` SetParam_aircon_on``` "and connect. Similarly, draw a line from "``` SetParam_aircon_off``` "and connect. @ <br> {}
-Click the Integrations block to open the settings screen. @ <br> {}
-Click “Custom API”. @ <br> {}
-(3) Click “GET” under “Request URL” and select “POST” from the options. @ <br> {}
-(4) Enter the URL issued by IFTTT's Webhooks. @ <br> {}
-(5) Click “Headers” in “Headers Body Params” under it. @ <br> {}
-(6) Enter “Content-Type” in “Enter HTTP Header” of Header Assignments. @ <br> {}
-(7) Enter “application / json” in Value. @ <br> {}
+Integrations block can be linked with API and GoogleSheet. @<br>{}
+(1) Drag “▶ ︎Advanced” → “Integrations” to the right of “``` SetParam_aircon_on``` ”. @<br>{}
+(2) Put out a line from the right side of "``` SetParam_aircon_on``` "and connect. Similarly, draw a line from "``` SetParam_aircon_off``` "and connect. @<br>{}
+Click the Integrations block to open the settings screen. @<br>{}
+Click “Custom API”. @<br>{}
+(3) Click “GET” under “Request URL” and select “POST” from the options. @<br>{}
+(4) Enter the URL issued by IFTTT's Webhooks. @<br>{}
+(5) Click “Headers” in “Headers Body Params” under it. @<br>{}
+(6) Enter “Content-Type” in “Enter HTTP Header” of Header Assignments. @<br>{}
+(7) Enter “application / json” in Value. @<br>{}
 
 
 #### Creation of Integrations block for calling external API-continued
 
 ![Continued](images/chapxx-sitopp/sito_030_6.png)
 
-In addition to the type of home appliances and on / off, pass a string for authentication. @ <br> {}
-(1) Click “body” of “Headers Body Params”. @ <br> {}
-(2) Click “Form Data”. @ <br> {}
-(3) Enter “value1” in “Enter key” of “Body Assignments”. @ <br> {}
-(4) Enter “{device}” for “value”. @ <br> {}
-(5) Click + on the right side to add an input field. @ <br> {}
-(6) Enter “value2” for “Enter key” and “{onoff}” for “value”. @ <br> {}
-(7) Click the + on the right again to add an input field. @ <br> {}
-(8) Enter “value3” in “Enter key” and ** any password ** in “value”. Do not use {}. @ <br> {}
+In addition to the type of home appliances and on / off, pass a string for authentication. @<br>{}
+(1) Click “body” of “Headers Body Params”. @<br>{}
+(2) Click “Form Data”. @<br>{}
+(3) Enter “value1” in “Enter key” of “Body Assignments”. @<br>{}
+(4) Enter “{device}” for “value”. @<br>{}
+(5) Click + on the right side to add an input field. @<br>{}
+(6) Enter “value2” for “Enter key” and “{onoff}” for “value”. @<br>{}
+(7) Click the + on the right again to add an input field. @<br>{}
+(8) Enter “value3” in “Enter key” and ** any password ** in “value”. Do not use {}. @<br>{}
 Note) In this example, 8 characters of "t7d = ClVt" are used. Please fill in the string that is unknown to others.
 It is better to close your eyes and hit the keyboard or use an automatic password generation site.
-From now on, the explanation will proceed as "t7d = ClVt", so please replace it with your own passphrase. @ <br> {} @ <br> {}
+From now on, the explanation will proceed as "t7d = ClVt", so please replace it with your own passphrase. @<br>{} @ <br> {}
 
 Next, create a block that tells you that it's done. There is no session, so please read the explanation carefully and proceed.
 
@@ -515,14 +515,14 @@ Next, create a block that tells you that it's done. There is no session, so plea
 
 ![](images/chapxx-sitopp/sito_030_7.png)
 
-Used to fork a conversation started from the Start block with Intent. @ <br> {}
+Used to fork a conversation started from the Start block with Intent. @<br>{}
 (1) Drag `` ▶ ︎Basic '' → `` Choice '' to the right of `````Speak_Guidance``` '', draw a line from````` Speak_Guidance``` '' and connect it,
-Click the Choice block to open the settings screen. @ <br> {}
-(2) Click the option under "1 path" and select "``` aircon_on``` ". @ <br> {}
-(3) Click “Add path”. @ <br> {}
-(4) When “2 path” is generated, click the same option and select “``` aircon_off``` ”. @ <br> {}
-(5) Connect a line from "1" in the Choice block to the "``` SetParam_aircon_on``` "block. @ <br> {}
-(6) Connect a line from "2" in the Choice block to the "``` SetParam_aircon_off``` "block. @ <br> {}
+Click the Choice block to open the settings screen. @<br>{}
+(2) Click the option under "1 path" and select "``` aircon_on``` ". @<br>{}
+(3) Click “Add path”. @<br>{}
+(4) When “2 path” is generated, click the same option and select “``` aircon_off``` ”. @<br>{}
+(5) Connect a line from "1" in the Choice block to the "``` SetParam_aircon_on``` "block. @<br>{}
+(6) Connect a line from "2" in the Choice block to the "``` SetParam_aircon_off``` "block. @<br>{}
 
 The flow is now complete. Please take a break and drink coffee (^ p ^).
 
@@ -744,11 +744,11 @@ For those who want to try it on Amazon Echo, we will explain how to make the flo
 ** The flow created this time will work on Alexa without any modification. This is the great thing about Voiceflow. ** It is OK if you only create and link an Alexa account, so let's do it quickly (^ p ^)
 
 #### Creating an Alexa Developer Account
-If you don't have one yet, create one. @ <br> {} @ <br> {}
-Actually, there is a point that you can easily make a mistake when creating an account, but the explanation written by Alexa Evangelist Mr. Hatanaka is very easy to understand, so it is absolutely OK to do it while reading it. @ <br> {} @ <br> {}
+If you don't have one yet, create one. @<br>{} @ <br> {}
+Actually, there is a point that you can easily make a mistake when creating an account, but the explanation written by Alexa Evangelist Mr. Hatanaka is very easy to understand, so it is absolutely OK to do it while reading it. @<br>{} @ <br> {}
 
-Alexa Developer Account Creation Tips @ <br> {}
-https://developer.amazon.com/ja/blogs/alexa/post/@ <br> {}
+Alexa Developer Account Creation Tips @<br>{}
+https://developer.amazon.com/ja/blogs/alexa/post/@<br>{}
 9f852a38-3a44-48bd-b78f-22050269d7c7 / hamaridokoro
 
 
@@ -785,7 +785,7 @@ If it works well on the simulator, try it on your Amazon Echo device.
 * Remote control should work after Amazon Echo responds "Sent."
 
 
-That's all for hands-on. Did it move safely? @ <br> {}
+That's all for hands-on. Did it move safely? @<br>{}
 There may be differences depending on the environment, and there may be parts that are different from the version when writing the manuscript, so I hope that you can try it out while googled.
 
 //embed[latex]{
@@ -794,12 +794,12 @@ There may be differences depending on the environment, and there may be parts th
 
 #### Finally
 
-Before I met Voiceflow, I worked hard on Alexa skill code, wrote it in Node.js and uploaded it to Lambda. However, at Alexa's hackathon in July 2019, there was a sad event that the development speed was originally low and the lack of sleep on the previous day made it almost impossible to write code. As I was young, I realized that I was writing code (I envy young people (^ o ^;)), and then started using Voiceflow to listen to rumors. @ <br> {} @ <br> {}
-If you do that, you will be able to make it overwhelmingly fun, and of course you do not have to write complicated skills, but I can do enough for simple skills such as workouts I am making (^ p ^ ). ** What was it until now (^ p ^) ** @ <br> {}
-At the same time, I began to look beyond Alexa skills. I hear that designers can now make Alexa skills on Voiceflow themselves. For me it was electronic work like this manuscript and Actions On Google. @ <br> {} @ <br> {}
-And electronic work. I like VUI, so I'm working hard to learn how to add voice control to various things, but I'm struggling because I have no basic knowledge of electrical systems. Professional people are amazing. So, I wonder if it may be said that it is another power application, and I opened it again as much as possible, and dragged as many hardware developers and embedded engineers as possible into the ** VUI swamp ** to take along with me, I want to make things together (^ p ^). Sound fun! @ <br> {} @ <br> {}
-Voiceflow does all the work of building a server around the web and uploading it to Google instead, so it's perfect for those who aren't good at the web to try it out. Of course, a more formal procedure is required when commercializing, but I think it is very convenient when making a prototype. @ <br> {} @ <br> {}
-Eventually, we hope that voice control will become a natural world, like the ```Computer of the Star Trek Enterprise No.``` and the Knight Rider Knight 2000. @ <br> {} @ <br> {}
+Before I met Voiceflow, I worked hard on Alexa skill code, wrote it in Node.js and uploaded it to Lambda. However, at Alexa's hackathon in July 2019, there was a sad event that the development speed was originally low and the lack of sleep on the previous day made it almost impossible to write code. As I was young, I realized that I was writing code (I envy young people (^ o ^;)), and then started using Voiceflow to listen to rumors. @<br>{} @ <br> {}
+If you do that, you will be able to make it overwhelmingly fun, and of course you do not have to write complicated skills, but I can do enough for simple skills such as workouts I am making (^ p ^ ). ** What was it until now (^ p ^) ** @<br>{}
+At the same time, I began to look beyond Alexa skills. I hear that designers can now make Alexa skills on Voiceflow themselves. For me it was electronic work like this manuscript and Actions On Google. @<br>{} @ <br> {}
+And electronic work. I like VUI, so I'm working hard to learn how to add voice control to various things, but I'm struggling because I have no basic knowledge of electrical systems. Professional people are amazing. So, I wonder if it may be said that it is another power application, and I opened it again as much as possible, and dragged as many hardware developers and embedded engineers as possible into the ** VUI swamp ** to take along with me, I want to make things together (^ p ^). Sound fun! @<br>{} @ <br> {}
+Voiceflow does all the work of building a server around the web and uploading it to Google instead, so it's perfect for those who aren't good at the web to try it out. Of course, a more formal procedure is required when commercializing, but I think it is very convenient when making a prototype. @<br>{} @ <br> {}
+Eventually, we hope that voice control will become a natural world, like the ```Computer of the Star Trek Enterprise No.``` and the Knight Rider Knight 2000. @<br>{} @ <br> {}
 Yes, then, "** Engage! **"
 
 

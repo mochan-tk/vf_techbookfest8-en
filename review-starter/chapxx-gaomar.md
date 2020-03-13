@@ -24,7 +24,7 @@ Then we will prepare them in order.
 #### Create resources
 Go to AWS and log in with your AWS account.
 
-[https://aws.amazon.com/jp/](https://aws.amazon.com/jp/)@ <br> {}
+[https://aws.amazon.com/jp/](https://aws.amazon.com/jp/)@<br>{}
 
 When the console screen opens, enter [Amazon Connect] from the service search and search. Click on the `Amazon Connect` that appeared.
 
@@ -328,7 +328,7 @@ Click the save button in the upper right.
 ![Click Save](images/chapxx-gaomar/s156.png)
 
 ## Set up Voiceflow
-From here, make settings in Voicecelflow. Access Voiceflow and log in. @ <br> {}
+From here, make settings in Voicecelflow. Access Voiceflow and log in. @<br>{}
 
 [https://www.voiceflow.com/](https://www.voiceflow.com/)
 

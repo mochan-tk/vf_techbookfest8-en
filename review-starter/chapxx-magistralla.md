@@ -1,7 +1,7 @@
 # Think about engagement
 ## Introduction
 "I'm glad if I have that skill", "I'll be happy if I can make such a skill" Voiceflow allows you to start developing skills as soon as you come up with it.
-If you want to make it with great effort, you want to create skills that will make the users happy and easy to use. @ <br> {}
+If you want to make it with great effort, you want to create skills that will make the users happy and easy to use. @<br>{}
 
 In this chapter, I'd like to think about how to create a skill that allows you to have a little attachment and a feeling of attachment.
 
@@ -13,7 +13,7 @@ This chapter is for the following people:
 
 ## Let's be conscious
 ### What is engagement?
-Engagement is, in a nutshell, a "connection" of intimacy, attachment and affection. @ <br> {}
+Engagement is, in a nutshell, a "connection" of intimacy, attachment and affection. @<br>{}
 
 In order to increase engagement, you need to think about "who will use the skill" and "what are the benefits of using the skill".
 To get to know the user deeply (specifically define), we use a tool called Persona.
@@ -27,7 +27,7 @@ By specifying the user profile and fitting it to the user, we will be able to pr
 //}
 
 You do not need to think too much.
-Voiceflow's strength is that it allows you to develop skills without knowing any specialty, so it's a good idea to think of a person as having a solid image in order to create skills specific to that person. @ <br> {}
+Voiceflow's strength is that it allows you to develop skills without knowing any specialty, so it's a good idea to think of a person as having a solid image in order to create skills specific to that person. @<br>{}
 
 There are three benefits to setting a persona:
 >-A common figure can be formed between the persons in charge
@@ -37,7 +37,7 @@ There are three benefits to setting a persona:
 From ferret. URL: https://ferret-plus.com/8116
 
 ## Development of sample skills
-Then, let's develop skills while thinking about engagement. @ <br> {}
+Then, let's develop skills while thinking about engagement. @<br>{}
 
 For example, suppose an elementary school child came up with a skill to check timetables.
 "Elementary school students" are abstract, so we will send more to users.
@@ -46,7 +46,7 @@ For example, suppose an elementary school child came up with a skill to check ti
 Let's set the persona.
 If a specific user has been decided, the user is imaged and organized.
 There are various ways of thinking about what to organize, but at first you can just list what you know.
-It is important at this point that you do not select information. I don't know where or how it will help, so let's leave it to the user for a later choice. @ <br> {}
+It is important at this point that you do not select information. I don't know where or how it will help, so let's leave it to the user for a later choice. @<br>{}
 
 Here, I will write two elementary school student personas so that you can see the difference in what is required even with the same theme.
 
@@ -57,14 +57,14 @@ It's easy, but considering the timetable skills along each persona
 - Since my eldest daughter is almost a fourth grader, I can imagine preparing for the next day by myself.
 - Since the second daughter is not yet enrolled, she is not accustomed to preparing for the next day alone, so "Skills to prepare together"
 
-Seems to be pleased. @ <br> {}
+Seems to be pleased. @<br>{}
 
 If you organize your users, you'll find that even the same theme skills are different.
 
 ### UI considerations
 Next, consider the UI for that skill.
 I started thinking with VoiceUI, but at this time, consider whether you really need it.
-There is no need to consider both input and output by voice. It can be combined with existing UIs, so consider what works best for improving the user experience. @ <br> {}
+There is no need to consider both input and output by voice. It can be combined with existing UIs, so consider what works best for improving the user experience. @<br>{}
 
 ![UI combination](images/chapxx-magistralla/type1.png)
 
@@ -101,7 +101,7 @@ Again, we aim to make it more fun to prepare yourself.
 
 ### Create skills with Voiceflow
 Although the theme of the timetable and the conversation flow are the same, the conversation content is specialized for each and it can be said that the engagement is high.
-Let's make a skill in Voiceflow according to this design document. @ <br> {}
+Let's make a skill in Voiceflow according to this design document. @<br>{}
 
 In the example, skills are created from the conversation flow of the second daughter.
 
@@ -118,7 +118,7 @@ With this, the skill for exclusive use of the second daughter is completed.
 ## To increase engagement
 ### Synonym
 In human-to-human conversations, "yes" and "yes" are unconsciously recognized as synonyms, but assistants do not know if they are synonyms.
-Therefore, register synonyms (including mistakes) that the user is likely to say, so that the conversation will be smooth. @ <br> {}
+Therefore, register synonyms (including mistakes) that the user is likely to say, so that the conversation will be smooth. @<br>{}
 
 In the example, we will register synonyms for "Done".
 
@@ -133,7 +133,7 @@ Now you can answer "Is it ready", "I'm done", "Yes", "Yeah" to the question "Are
 //}
 
 ### Date and time information
-Using the date information when the skill was used, it is possible to change the message according to the day of the week and time zone, and to have a conversation according to the user's calendar etc. @ <br> {}
+Using the date information when the skill was used, it is possible to change the message according to the day of the week and time zone, and to have a conversation according to the user's calendar etc. @<br>{}
 
 In the example, the day before each lesson, I will say an additional message to support the piano.
 Refer to the Voiceflow forum for how to use the "code" block.
@@ -188,7 +188,7 @@ Now you can tell the correct answer by sound.
 //}
 
 #### Speechcons
-Use Speechcon if you can hear it in a conversation with your assistant. @ <br> {}
+Use Speechcon if you can hear it in a conversation with your assistant. @<br>{}
 Speechcon is a special word that the assistant speaks expressively.
 
 - Alexa

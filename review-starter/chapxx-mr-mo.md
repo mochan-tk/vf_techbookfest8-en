@@ -57,7 +57,7 @@ Documents are explained in an easy-to-understand video format. Please refer to "
 ![Tutorial](images/chapxx-mr-mo/vf22.png)
 
 #### [Video commentary]
-[https://www.youtube.com/channel/UCbqUIYQ7J2rS6C_nk4cNTxQ](https://www.youtube.com/channel/UCbqUIYQ7J2rS6C_nk4cNTxQ)@ <br> {}
+[https://www.youtube.com/channel/UCbqUIYQ7J2rS6C_nk4cNTxQ](https://www.youtube.com/channel/UCbqUIYQ7J2rS6C_nk4cNTxQ)@<br>{}
 
 In addition, opinions are actively exchanged below, so please use them together.
 
