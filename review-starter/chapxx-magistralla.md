@@ -50,7 +50,7 @@ It is important at this point that you do not select information. I don't know w
 
 Here, I will write two elementary school student personas so that you can see the difference in what is required even with the same theme.
 
-! [Elder daughter and second daughter persona] (images / chapxx-magistralla / persona1.png)
+![Elder daughter and second daughter persona](images/chapxx-magistralla/persona1.png)
 
 It's easy, but considering the timetable skills along each persona
 
@@ -66,7 +66,7 @@ Next, consider the UI for that skill.
 I started thinking with VoiceUI, but at this time, consider whether you really need it.
 There is no need to consider both input and output by voice. It can be combined with existing UIs, so consider what works best for improving the user experience. @ <br> {}
 
-! [UI combination] (images / chapxx-magistralla / type1.png)
+![UI combination](images/chapxx-magistralla/type1.png)
 
 In the example, the usage scene of children using skills is imagined as follows.
 
@@ -87,13 +87,13 @@ Think about the conversation flow and content along each persona.
 I prepared for the next day myself, so I asked the eldest daughter to speak what I had prepared, and the assistant made a decision on OK / NG.
 Talk with your assistant in a quiz format, and aim to make it fun to answer correctly.
 
-! [Conversation flow for the eldest daughter] (images / chapxx-magistralla / alice01.png)
+![Conversation flow for the eldest daughter](images/chapxx-magistralla/alice01.png)
 
 #### In case of second daughter
 I wanted my assistant to be ready, so I asked her assistant what to prepare and let her answer what she could or couldn't do.
 Again, we aim to make it more fun to prepare yourself.
 
-! [Conversation flow for second daughter] (images / chapxx-magistralla / suzu01.png)
+![Conversation flow for second daughter](images/chapxx-magistralla/suzu01.png)
 
 // embed [latex] {
 \ clearpage
@@ -105,9 +105,9 @@ Let's make a skill in Voiceflow according to this design document. @ <br> {}
 
 In the example, skills are created from the conversation flow of the second daughter.
 
-! [Utterance and block] (images / chapxx-magistralla / suzu02.png)
+![Utterance and block](images/chapxx-magistralla/suzu02.png)
 
-! [Implement the conversation flow with Voiceflow] (images / chapxx-magistralla / base.png)
+![Implement the conversation flow with Voiceflow](images/chapxx-magistralla/base.png)
 
 With this, the skill for exclusive use of the second daughter is completed.
 
@@ -122,9 +122,9 @@ Therefore, register synonyms (including mistakes) that the user is likely to say
 
 In the example, we will register synonyms for "Done".
 
-! [Utterance and block] (images / chapxx-magistralla / suzu03.png)
+![Utterance and block](images/chapxx-magistralla/suzu03.png)
 
-! [Synonym] (images / chapxx-magistralla / synonym.png)
+![Synonym](images/chapxx-magistralla/synonym.png)
 
 Now you can answer "Is it ready", "I'm done", "Yes", "Yeah" to the question "Are you ready?"
 
@@ -139,9 +139,9 @@ In the example, the day before each lesson, I will say an additional message to 
 Refer to the Voiceflow forum for how to use the "code" block.
 https://forum.voiceflow.com/t/getting-the-users-time-zone-in-your-skill/314
 
-! [Utterance and block] (images / chapxx-magistralla / suzu04.png)
+![Utterance and block](images/chapxx-magistralla/suzu04.png)
 
-! [Day of the week] (images / chapxx-magistralla / weekday.png)
+![Day of the week](images/chapxx-magistralla/weekday.png)
 
 The day before the piano, I can now say, "Tomorrow is the piano."
 
@@ -177,9 +177,9 @@ Enter the `audio` tag in the" speak "block. For Alexa skills, you can copy and p
 <audio src = "soundbank: // soundlibrary / ui / gameshow / amzn_ui_sfx_gameshow_positive_response_01" />
 `` `
 
-! [Utterance and block] (images / chapxx-magistralla / suzu05.png)
+![Utterance and block](images/chapxx-magistralla/suzu05.png)
 
-! [Sound library] (images / chapxx-magistralla / soundlib.png)
+![Sound library](images/chapxx-magistralla/soundlib.png)
 
 Now you can tell the correct answer by sound.
 
@@ -202,9 +202,9 @@ Enter `say-as` tag and attribute` interpret-as = "interjection" `in" speak "bloc
 <Say-as interpret-as = "interjection"> Hello </ say-as>
 `` `
 
-! [Utterance and block] (images / chapxx-magistralla / suzu06.png)
+![Utterance and block](images/chapxx-magistralla/suzu06.png)
 
-! [Speechcon] (images / chapxx-magistralla / speechcon.png)
+![Speechcon](images/chapxx-magistralla/speechcon.png)
 
 Now, "Hello" is now expressive.
 

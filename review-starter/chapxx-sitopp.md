@@ -16,7 +16,7 @@ In addition to Voiceflow, we have a collection of techniques that can be used fo
 * Connect everything and check operation
 * Compatible with Amazon Alexa
 
-! [Architecture] (images / chapxx-sitopp / sito_001.png)
+![Architecture](images/chapxx-sitopp/sito_001.png)
 
 #### Development environment
 
@@ -45,7 +45,7 @@ I think that Google Home mini was bought at a discount sale for about 3000 yen. 
 // footnote [sitopp_prices] [Price of M5StickC and infrared transceiver is the tax-included price as of January 12, 2020 on the switch science mail order site. ]
 
 
-! [Parts used] (images / chapxx-sitopp / sito_002.png)
+![Parts used](images/chapxx-sitopp/sito_002.png)
 
 
 // embed [latex] {
@@ -78,7 +78,7 @@ Install Arduino IDE. Skip those who are already using it.
 https://dl.espressif.com/dl/package_esp32_index.json
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
 `` `
-! [] (images / chapxx-sitopp / sito_004.png)
+![](images/chapxx-sitopp/sito_004.png)
 
 * Click "OK" at the bottom right of the "Preferences" screen to close it.
 * Next, open "Tools" → "Board: ~" → "` `` Board Manager ... `` `".
@@ -107,7 +107,7 @@ Use the infrared remote control of the home appliance you want to use and the M5
 * Select "Tool"-> "Board"-> "M5StickC".
 * "Tools"-> "Serial Port"-> Select the option that contains "/dev/cu.usbserial-" from the displayed options.
 
-! [Tools menu after successfully connecting to serial port] (images / chapxx-sitopp / sito_009.png)
+![Tools menu after successfully connecting to serial port](images/chapxx-sitopp/sito_009.png)
 
 
 * Enter "Tools"-> "Manage Libraries"-> "IRremoteESP8266" of Arduino IDE and install the displayed libraries.
@@ -146,7 +146,7 @@ Next, use the remote control of the target home appliance.
 * Code is output to the serial monitor.
 * Copy the full text of this log and save it in Notepad.
 
-! [Capturing infrared command pattern] (images / chapxx-sitopp / sito_021.png)
+![Capturing infrared command pattern](images/chapxx-sitopp/sito_021.png)
 
 Example) The command pattern of infrared rays when pressing OFF and ON once each on the remote control of Daikin's air conditioner in my home is as follows.
 
@@ -221,9 +221,9 @@ In the case of Daikin, the contents of “{}” in “uint8_t daikin_code [35] =
 `` `
 
 
-! [Infrared command pattern collected by M5StickC] (images / chapxx-sitopp / sito_024.png)
+![Infrared command pattern collected by M5StickC](images/chapxx-sitopp/sito_024.png)
 
-! [Sample code] (images / chapxx-sitopp / sito_025.png)
+![Sample code](images/chapxx-sitopp/sito_025.png)
 In this sample code, line breaks are inserted for easy reading. It works properly even with line breaks.
 
 
@@ -238,7 +238,7 @@ In this sample code, line breaks are inserted for easy reading. It works properl
 
 If the air conditioner does not respond, try moving the M5StickC closer to the air conditioner. When power is not supplied by USB cable, it may not respond unless it is close to 50cm.
 
-! [While operating the air conditioner with M5StickC] (images / chapxx-sitopp / sito_023.png)
+![While operating the air conditioner with M5StickC](images/chapxx-sitopp/sito_023.png)
 
 
 
@@ -253,7 +253,7 @@ In such a case, you can see if you capture the “infrared output side” of the
 
 Below is a picture taken with iPhone X. Even if you do not take a picture, you can capture it with the camera lens. When you look at it while holding down the M5 button, you can see a faint violetish glow.
 
-! [Infrared is reflected on iPhone front camera] (images / chapxx-sitopp / sito_023_2.png)
+![Infrared is reflected on iPhone front camera](images/chapxx-sitopp/sito_023_2.png)
 
 #### For manufacturers other than Daikin
 
@@ -311,7 +311,7 @@ Description: Daikin infrared remote control for spoofing
 * "Feeds" → "View All" → "daikin_onoff" → "Feed Info"
 * The following screen opens, and copy the MQTT Topic displayed under "MQTT by Key" to Notepad.
 
-! [] (images / chapxx-sitopp / sito_027.png)
+![](images/chapxx-sitopp/sito_027.png)
 
 
 * Access the following URL and check the server information of `` `MQTT broker```
@@ -330,7 +330,7 @@ Password Your Adafruit IO Key
 Username / Password is different for each person. Also, it is different from the user account of `` `https: // io.adafruit.com /` ``.
 Click on the `` `AIO Key``` on the right shoulder of the dashboard to view it, so be sure to check it.
 
-! [Click here to view AIO Key] (images / chapxx-sitopp / sito_027_2.png)
+![Click here to view AIO Key](images/chapxx-sitopp/sito_027_2.png)
 
 // embed [latex] {
 \ clearpage
@@ -359,7 +359,7 @@ When you access the URL issued by Webhooks, you create a mechanism to publish a 
 
 The applet is now complete. Click "settings" at the top right for details.
 
-! [Details of IFTTT applet] (images / chapxx-sitopp / sito_026.png)
+![Details of IFTTT applet](images/chapxx-sitopp/sito_026.png)
 
 
 #### Check the URL issued by Webhooks
@@ -372,7 +372,7 @@ It will be called from Voiceflow later, so let's check it out.
 * Copy the URL starting with `` `https: //` `` and write it down in Notepad. @ <br> {}
 Example) URL: https://maker.ifttt.com/trigger/M5StickCIRRemoCon/with/key/ (Omitted)
 
-! [Webhooks URL] (images / chapxx-sitopp / sito_028.png)
+![Webhooks URL](images/chapxx-sitopp/sito_028.png)
 
 
 
@@ -398,7 +398,7 @@ From here on, I will explain in detail with screenshots.
 
 #### Creating a Speak block that speaks the "Welcome" part
 
-! [] (images / chapxx-sitopp / sito_030_1.png)
+![](images/chapxx-sitopp/sito_030_1.png)
 
 This is the basic usage of Speak block. @ <br> {}
 (1) Slide the "Alexa Google" switch on the header to "Google". @ <br> {}
@@ -413,7 +413,7 @@ Confirm that the "Upload to Alexa" button changes to "Upload to Google". @ <br> 
 
 #### Creating Intent Block to Pick Up Utterance
 
-! [] (images / chapxx-sitopp / sito_030_2.png)
+![](images/chapxx-sitopp/sito_030_2.png)
 
 A block to turn on the air conditioner and pick up utterances. I will make them together for each meaning. @ <br> {}
 (1) Click “` `` ▶ ︎Basic``` ”in the“ Blocks ”menu to open it, and drag“ Intent ”under“ `` `Speak_Guidance```”. @ <br> {}
@@ -443,7 +443,7 @@ Similarly, make a part to turn off the air conditioner.
 
 #### Parameter declaration
 
-! [] (images / chapxx-sitopp / sito_030_3.png)
+![](images/chapxx-sitopp/sito_030_3.png)
 
 To make the flow cleaner, we will use parameters. @ <br> {}
 (1) Click the third icon "Variables" from the top of the ultra-thin pane on the left of the Design screen. @ <br> {}
@@ -453,7 +453,7 @@ To make the flow cleaner, we will use parameters. @ <br> {}
 
 #### Creating a set block to route parameters
 
-! [] (images / chapxx-sitopp / sito_030_4.png)
+![](images/chapxx-sitopp/sito_030_4.png)
 
 The Set block can set parameters. @ <br> {}
 (1) Click the icon “Blocks” at the top of the ultra-thin pane on the left of the Design screen. @ <br> {}
@@ -475,7 +475,7 @@ Similarly, make a Set block to turn off the air conditioner.
 
 #### Creation of Integrations block for calling external API
 
-! [] (images / chapxx-sitopp / sito_030_5.png)
+![](images/chapxx-sitopp/sito_030_5.png)
 
 Integrations block can be linked with API and GoogleSheet. @ <br> {}
 (1) Drag “▶ ︎Advanced” → “Integrations” to the right of “` `` SetParam_aircon_on``` ”. @ <br> {}
@@ -491,7 +491,7 @@ Click “Custom API”. @ <br> {}
 
 #### Creation of Integrations block for calling external API-continued
 
-! [Continued] (images / chapxx-sitopp / sito_030_6.png)
+![Continued](images/chapxx-sitopp/sito_030_6.png)
 
 In addition to the type of home appliances and on / off, pass a string for authentication. @ <br> {}
 (1) Click “body” of “Headers Body Params”. @ <br> {}
@@ -513,7 +513,7 @@ Next, create a block that tells you that it's done. There is no session, so plea
 
 #### Choice block added
 
-! [] (images / chapxx-sitopp / sito_030_7.png)
+![](images/chapxx-sitopp/sito_030_7.png)
 
 Used to fork a conversation started from the Start block with Intent. @ <br> {}
 (1) Drag `` ▶ ︎Basic '' → `` Choice '' to the right of `` `` `Speak_Guidance``` '', draw a line from` `` `` Speak_Guidance``` '' and connect it,
@@ -548,7 +548,7 @@ The flow is now complete. Please take a break and drink coffee (^ p ^).
 
 (3) Check IFTTT issue history
 
-! [IFTTT Webhoooks execution history] (images / chapxx-sitopp / sito_031.png)
+![IFTTT Webhoooks execution history](images/chapxx-sitopp/sito_031.png)
 
 * Access IFTTT's My Applet. (`` `https://ifttt.com/my_applets` ``)
 * Click the created applet "` `` If Maker Event "M5StickCIRRemoCon", then Send data to onoff feed``` ".
@@ -572,7 +572,7 @@ The flow is now complete. Please take a break and drink coffee (^ p ^).
 
 Note) When creating "Test-Project" in DialogFlow, "Japanese-ja" must be specified in DEFAULT LANGUAGE. According to Voiceflow's guidance:
 
-! [Here, specify Japanese-ja. ] (images / chapxx-sitopp / sito_032.png)
+![Here, specify Japanese-ja. ](images/chapxx-sitopp/sito_032.png)
 
 The above guidance has been completed after uploading Json, so I will continue.
 
@@ -596,7 +596,7 @@ Now, return to the simulator and check the operation.
 * "Okay. This is a test version of the song. Please turn on the air conditioner or turn off the air conditioner." Enter and press enter.
 * There is a response saying "Sent." And the action ends. OK.
 
-! [Study test] (images / chapxx-sitopp / sito_036.png)
+![Study test](images/chapxx-sitopp/sito_036.png)
 
 If you get an error, try the following:
 
@@ -706,7 +706,7 @@ Let's run it from the Actions On Google console.
 * If you get a response saying, "OK, this is a test version of the Shojiji. ~", Enter "Turn on air conditioner" or "Turn on heating" and press enter.
 * After reading out the man's voice saying "Sent", the air conditioner turns on one second later.
 
-! [Operation confirmed with the simulator of Actions Console] (images / chapxx-sitopp / sito_039.png)
+![Operation confirmed with the simulator of Actions Console](images/chapxx-sitopp/sito_039.png)
 
 
 If it works, try it from the actual device.
@@ -771,7 +771,7 @@ If you get an "Error 404" message when you click "Test on Alexa Simulator", clic
 
 As a result of the conversation so far, you should see the following exchanges on the simulator.
 
-! [Operation confirmed with alexa simulator] (images / chapxx-sitopp / sito_042.png)
+![Operation confirmed with alexa simulator](images/chapxx-sitopp/sito_042.png)
 
 
 If it works well on the simulator, try it on your Amazon Echo device.

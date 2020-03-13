@@ -151,7 +151,7 @@ This can be used to branch off existing stories or to create new ones.
 As an example, we chose "Momotaro" (public domain) for the existing story for clarity. @ <br> {}
 
 
-! [Story basic item list (example)] (images / chapxx-vui-rie / story_kihonkoumoku_rei.png)
+![Story basic item list (example)](images/chapxx-vui-rie/story_kihonkoumoku_rei.png)
 
 
 
@@ -183,7 +183,7 @@ What do you want to tell in the story?
 The reason for keeping it within 10 is that it is easy to blur what you want to convey if there are too many. @ <br> {}
 
 
-! [Story basic item list] (images / chapxx-vui-rie / story_kihonkoumoku_kara.png)
+![Story basic item list](images/chapxx-vui-rie/story_kihonkoumoku_kara.png)
 
 
 
@@ -206,9 +206,9 @@ In a story that everyone knows like this example, “Momotaro”, it is a form o
 However, after trying a few things, you will gradually get used to it. Try to do the numbers. @ <br> {}
 
 
-! [Story box (example)] (images / chapxx-vui-rie / story_box_rei.png)
+![Story box (example)](images/chapxx-vui-rie/story_box_rei.png)
 
-! [Story Box] (images / chapxx-vui-rie / story_box_kara.png)
+![Story Box](images/chapxx-vui-rie/story_box_kara.png)
 
 
 
@@ -299,7 +299,7 @@ To have a good relationship, you need to have a clear personality facing the use
 I want to be more with this person, I want to talk more, I want to play ... The first step in forming a personality that users can think of. That is this "resume".
 
 
-! [Skill resume] (images / chapxx-vui-rie / rirekisyo.png)
+![Skill resume](images/chapxx-vui-rie/rirekisyo.png)
 
 
 
@@ -557,7 +557,7 @@ It is necessary to separately inform the voice actor of the story of the story a
 
 The format of the script is also posted.
 
-! [Script format] (images / chapxx-vui-rie / daihon.png)
+![Script format](images/chapxx-vui-rie/daihon.png)
 
 
 
