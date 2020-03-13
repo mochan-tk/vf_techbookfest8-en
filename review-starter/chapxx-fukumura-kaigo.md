@@ -54,7 +54,7 @@ Then, immediately on the Voiceflow screen. . . wait a minute!
 As with Voiceflow, there is a way to create Alexa skills without coding, called Blueprints.
 
 Please access [https://blueprints.amazon.co.jp/](https://blueprints.amazon.co.jp/).
-! [Blueprints home screen] (images / chapxx-fukumura-kaigo / blueprints_home.png)
+![Blueprints home screen](images/chapxx-fukumura-kaigo/blueprints_home.png)
 
 Blueprints comes with pre-made templates that you can customize to easily create Alexa skills.
 As of January 2020, the following templates are available.
@@ -76,19 +76,19 @@ Now, let's actually create and compare skills with Blueprints and Voiceflow, usi
 ### Blueprints (Custom Q & A)
 On the Blueprints home screen ([https://blueprints.amazon.co.jp/](https://blueprints.amazon.co.jp/)), select “Custom Q & A” and press the “Create” button .
 
-! [New Blueprints Custom Q & A] (images / chapxx-fukumura-kaigo / blueprints_qa1.png)
+![New Blueprints Custom Q & A](images/chapxx-fukumura-kaigo/blueprints_qa1.png)
 
 The default question and content are displayed as the initial display.
 
 (The default question is what you would use in everyday life, such as snack content and your favorite place!)
 
-! [Blueprints custom Q & A default] (images / chapxx-fukumura-kaigo / blueprints_qa2.png)
+![Blueprints custom Q & A default](images/chapxx-fukumura-kaigo/blueprints_qa2.png)
 
 This time, the default contents are unnecessary, so delete them once.
 
 (There is no problem if you do not delete it.)
 
-! [Blueprints custom Q & A clear] (images / chapxx-fukumura-kaigo / blueprints_qa3.png)
+![Blueprints custom Q & A clear](images/chapxx-fukumura-kaigo/blueprints_qa3.png)
 
 From here, press the "Add Q & A" button and enter the questions and answers to be asked for emergency contact information.
 
@@ -96,7 +96,7 @@ Please enter some possible questions, such as "What is your emergency contact?" 
 
 Next, enter your answer. Here, I entered my son's phone number as an emergency contact.
 
-! [Blueprints custom Q & A input] (images / chapxx-fukumura-kaigo / blueprints_qa4.png)
+![Blueprints custom Q & A input](images/chapxx-fukumura-kaigo/blueprints_qa4.png)
 
 After entering, click the “Next 次 Create Skill” button and you are done. The skill is completed in a few minutes.
 
@@ -111,7 +111,7 @@ Press "Create Project" on the Voiceflow home screen.
 
 Unlike the custom Q & A of Blueprints, you need to enter the skill name, so let's call it "My Emergency Contact".
 
-! [New Voiceflow] (images / chapxx-fukumura-kaigo / voiceflow1.png)
+![New Voiceflow](images/chapxx-fukumura-kaigo/voiceflow1.png)
 
 The following are possible ways to create skills to answer multiple questions and answers, but in this case we want to know the emergency contact information, so we chose the latter in order to give priority to responding immediately.
 
@@ -120,17 +120,17 @@ The following are possible ways to create skills to answer multiple questions an
 
 First, add a Speak block and enter your answer.
 
-! [Add Voiceflow Speak block] (images / chapxx-fukumura-kaigo / voiceflow2.png)
+![Add Voiceflow Speak block](images/chapxx-fukumura-kaigo/voiceflow2.png)
 
 Finally, add an EXIT block to end the skill, and that's it.
 
-! [Add Voiceflow Speak block] (images / chapxx-fukumura-kaigo / voiceflow3.png)
+![Add Voiceflow Speak block](images/chapxx-fukumura-kaigo/voiceflow3.png)
 
 Press the "Upload to Alexa" button to complete your skill.
 Just say "Alexa, open my emergency contact" on the test console, Alexa app, or Echo device. It should return an answer.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ## Create skills even for non-engineers!
