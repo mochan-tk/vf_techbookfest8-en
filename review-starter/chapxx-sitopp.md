@@ -1,8 +1,8 @@
 # Create your own smart remote with M5StickC and control home appliances from Google Home
 
 Ito. I wrote this chapter to make it easier for people in the electronic work cluster to know "how to attach a voice operation interface easily".
-Or, if you're a VUI cluster member, it's super fun if you haven't done so yet, `````@<br>{}
-This time, we use the popular low-priced microcontroller "M5StickC". There is no worry about electric shock because it is not in the exposed ```board` '' but in the case. @<br>{}
+Or, if you're a VUI cluster member, it's super fun if you haven't done so yet.@<br>{}
+This time, we use the popular low-priced microcontroller "M5StickC". There is no worry about electric shock because it is not in the exposed __board__ but in the case. @<br>{}
 Voiceflow supports both Google Home and Amazon Echo, so use whichever you have. A smartphone app is also OK.
 In addition to Voiceflow, we have a collection of techniques that can be used for IoT prototyping, such as MQTT and IFTTT, so we hope you find some hints.
 
@@ -31,7 +31,7 @@ I used a Mac, but Windows has common tools. Please read as appropriate and proce
 #### Parts used, smart speakers
 
 * M5StickC ¥ 1,980 @<fn>{sitopp_prices}
-* Infrared transmitter / receiver unit for M5 ¥ 308
+* Infrared transmitter/receiver unit for M5 ¥ 308
 * Google Home mini
 
 M5StickC has infrared transmission function, but no reception function. This time, M5StickC is also used to check the infrared command pattern of the home appliance remote control, so I used an M5 infrared transceiver unit to receive infrared.
@@ -58,9 +58,9 @@ I think that Google Home mini was bought at a discount sale for about 3000 yen. 
 
 Install Arduino IDE. Skip those who are already using it.
 
-* Open the Arduino web page (```https: // www.arduino.cc /```) in chrome.
+* Open the Arduino web page (```https://www.arduino.cc/```) in chrome.
 * Click "SOFTWARE" → "DOWNLOAD".
-* Click "``` Mac OS X 10.8 Mountain Lion or newer``` "in the paragraph of" Download the Arduino IDE ".
+* Click "```Mac OS X 10.8 Mountain Lion or newer```" in the paragraph of "Download the Arduino IDE".
 * When "Contribute to the Arduino Software" page opens, click "JUST DOWNLOAD" @<fn>{sitopp_donate}.
 * Wait for the download of the approximately 200MB file to finish.
 * Expand the downloaded zip file and the application "Arduino.app" will appear. Move to the application folder.
@@ -71,7 +71,7 @@ Install Arduino IDE. Skip those who are already using it.
 * Start Arduino IDE.
 * The editor "sketch_date" opens, but closes without saving because it is not used now.
 * Click "Arduino"> "Preferences .." to open "Network" of "Preferences" screen.
-* Click the window icon to the right of the "``` Additional Board Manager URL``` "input field.
+* Click the window icon to the right of the "```Additional Board Manager URL```" input field.
 * Enter 2 lines as below and click OK.
 
 ```
@@ -81,14 +81,14 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 ![](images/chapxx-sitopp/sito_004.png)
 
 * Click "OK" at the bottom right of the "Preferences" screen to close it.
-* Next, open "Tools" → "Board: ~" → "``` Board Manager ... ```".
-* Enter "``` esp32``` "in the input field to the right of" ```Type All``` '.
+* Next, open "Tools" → "Board: ~" → "```Board Manager...```".
+* Enter "```esp32```" in the input field to the right of "```Type All```'.
 * If "esp32 by Espressif Sysrems" is hit, click "Install".
 * When the installation is completed, click "Close" to close ```Board Manager```.
 
 
 * Next, click "Sketch" → "Include Library" → "Manage Library".
-* When "``` Library Manager``` opens, enter "``` M5StickC``` "in the input field to the right of" ```Type All```".
+* When "```Library Manager```" opens, enter "``` M5StickC```" in the input field to the right of" ```Type All```".
 * If "M5StickC by M5StickC version ~" is hit, click "Install".
 * When the installation is completed, click "Close" to close ```Library Manager```.
 * Quit the IDE with "Arduino" → "Quit Arduino" and restart.
@@ -102,7 +102,7 @@ You have now set up the Arduino IDE.
 Use the infrared remote control of the home appliance you want to use and the M5StickC, so please have them at hand.
 
 
-* Attach ```Infrared transmitting / receiving unit``` to M5StickC.
+* Attach ```Infrared transmitting/receiving unit``` to M5StickC.
 * Connect M5StickC to Mac with USB Type-C cable.
 * Select "Tool"-> "Board"-> "M5StickC".
 * "Tools"-> "Serial Port"-> Select the option that contains "/dev/cu.usbserial-" from the displayed options.
@@ -129,12 +129,12 @@ const uint16_t kRecvPin = 33;
 * Installation is complete when the following message appears.
 
 ```
-Writing at 0x00008000 ... (100%)
+Writing at 0x00008000... (100%)
 Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.0 seconds
 Hash of data verified.
 
-Leaving ...
-Hard resetting via RTS pin ...
+Leaving...
+Hard resetting via RTS pin...
 ```
 
 * Click "Tools" → "Serial Monitor" to open a new screen.
@@ -151,25 +151,25 @@ Next, use the remote control of the target home appliance.
 Example) The command pattern of infrared rays when pressing OFF and ON once each on the remote control of Daikin's air conditioner in my home is as follows.
 
 ```
-21: 39: 17.721-> Timestamp: 000130.976
-21: 39: 17.721-> Library: v2.7.1
-21: 39: 17.721->
-21: 39: 17.721-> Protocol: DAIKIN
-21: 39: 17.721-> Code: 0x11DA2700C50000D711DA270042000054 (hereinafter abbreviated)
-21: 39: 17.721-> Mesg Desc .: Power: Off, Mode: 4 (Heat), Temp:
-21: 39: 17.792-> uint16_t rawData [583] = {492, 396, (omitted) 466}; // DAIKIN
-21: 39: 18.076-> uint8_t state [35] = {0x11, 0xDA, 0x27, 0x00, (abbreviated) 0x76};
-21: 39: 18.076->
-21: 39: 18.076->
-21: 39: 34.883-> Timestamp: 000148.122
-21: 39: 34.883-> Library: v2.7.1
-21: 39: 34.883->
-21: 39: 34.883-> Protocol: DAIKIN
-21: 39: 34.883-> Code: 0x11DA2700C50000D711DA270042000054 (hereinafter abbreviated)
-21: 39: 34.883-> Mesg Desc .: Power: On, Mode: 4 (Heat), Temp:
-21: 39: 34.945-> uint16_t rawData [583] = {510, 374, (omitted) 494}; // DAIKIN
-21: 39: 35.211-> uint8_t state [35] = {0x11, 0xDA, 0x27, 0x00, (abbreviated) 0x77};
-21: 39: 35.248->
+21:39:17.721 -> Timestamp: 000130.976
+21:39:17.721 -> Library: v2.7.1
+21:39:17.721 ->
+21:39:17.721 -> Protocol: DAIKIN
+21:39:17.721 -> Code: 0x11DA2700C50000D711DA270042000054 (hereinafter abbreviated)
+21:39:17.721 -> Mesg Desc .: Power: Off, Mode: 4 (Heat), Temp: (hereinafter abbreviated)
+21:39:17.792 -> uint16_t rawData [583] = {492, 396, (omitted) 466}; // DAIKIN
+21:39:18.076 -> uint8_t state [35] = {0x11, 0xDA, 0x27, 0x00, (abbreviated) 0x76};
+21:39:18.076 ->
+21:39:18.076 ->
+21:39:34.883 -> Timestamp: 000148.122
+21:39:34.883 -> Library: v2.7.1
+21:39:34.883 ->
+21:39:34.883 -> Protocol: DAIKIN
+21:39:34.883 -> Code: 0x11DA2700C50000D711DA270042000054 (hereinafter abbreviated)
+21:39:34.883 -> Mesg Desc .: Power: On, Mode: 4 (Heat), Temp: (hereinafter abbreviated)
+21:39:34.945 -> uint16_t rawData [583] = {510, 374, (omitted) 494}; // DAIKIN
+21:39:35.211 -> uint8_t state [35] = {0x11, 0xDA, 0x27, 0x00, (abbreviated) 0x77};
+21:39:35.248 ->
 ```
 
 
@@ -178,10 +178,10 @@ Example) The command pattern of infrared rays when pressing OFF and ON once each
 The command pattern of the infrared remote control is not unified among manufacturers, and the format is different.
 This book explains how to use Daikin's air conditioner. @<fn>{sitopp_maker}
 
-//footnote[sitopp_maker][About maker other than Daikin, there was a page that kindly explained variously when googled, so I introduced it in the section "In case of maker other than Daikin". Please refer to it. ]
+//footnote[sitopp_maker][About maker other than Daikin, there was a page that kindly explained variously when googled, so I introduced it in the section "In case of maker other than Daikin". Please refer to it.]
 
 
-* Enter "Tools"-> "Include Libraries"-> "Manage Libraries"-> "IRsend" of Arduino IDE.
+* Enter "Tools" -> "Include Libraries" -> "Manage Libraries" -> "IRsend" of Arduino IDE.
 * Install the displayed library.
 
 
@@ -189,7 +189,7 @@ You can find the coat I wrote on the following URL and access it.
 
 ```
 URL: https://GitHub.com/sitopp/vf_techbookfest8_sampleCode
-File path: M5StickC / IRsendDemo_DAIKIN.ino
+File path: M5StickC/IRsendDemo_DAIKIN.ino
 * If you get a 404 error, log in to GitHub and open it again.
 * If you do not have an account, create one first and log in.
 ```
@@ -259,7 +259,7 @@ Below is a picture taken with iPhone X. Even if you do not take a picture, you c
 
 Thankfully, there is sample code on GitHub, the author of the IRremoteESP8266 library.
 
-https://GitHub.com/crankyoldgit/IRremoteESP8266
+https://github.com/crankyoldgit/IRremoteESP8266
 
 
 However, this is not clear enough, so here are a few helpful blogs that are very helpful.
@@ -267,10 +267,10 @@ However, this is not clear enough, so here are a few helpful blogs that are very
 * Use infrared remote control with M5StickC (NEC example) Masayuki Tanaka @<br>{}
 https://lang-ship.com/blog/?p=886
 
-* Make a home appliance remote control that can be operated from a smartphone with M5StickC (NEC example) @ elchika @<br>{}
+* Make a home appliance remote control that can be operated from a smartphone with M5StickC (NEC example) @elchika @<br>{}
 https://elchika.com/article/218f5072-28a6-461c-a801-43390305f4cc/
 
-* Make infrared remote control with M5Stick-C (Fujitsu example) @ poruruba @<br>{}
+* Make infrared remote control with M5Stick-C (Fujitsu example) @poruruba @<br>{}
 https://qiita.com/poruruba/items/34220a4dd6aaf48392aa
 
 * I transmitted and received infrared remote control data with M5StickC. (Example of Panasonic) RESEARCHER @<br>{}
@@ -286,7 +286,7 @@ https://kuratsuki.net/2019/07/
 
 ## Adafruit MQTT settings
 
-MQTT is a lightweight data distribution protocol of the Pub / Sub type data distribution model by TCP / IP.
+MQTT is a lightweight data distribution protocol of the Pub/Sub type data distribution model by TCP/IP.
 It is a mechanism that allows you to send commands safely to IoT devices in networks such as homes and factories when you want to send commands from outside.
 However, if you do not pay attention to security, it may be that someone else has been heating up your house without permission.
 So, this time, I will use Adafruit's MQTT, which is free but can use the user authentication function.
@@ -300,7 +300,7 @@ Name: voiceflowIRDev
 Description: For development
 ```
 
-* Input the following in "Feeds"-> "View All"-> "Actions"-> "Create a new feed".
+* Input the following in "Feeds" -> "View All" -> "Actions" -> "Create a new feed".
 
 ```
 Name: daikin_onoff
@@ -327,7 +327,7 @@ Username Your Adafruit IO Username
 Password Your Adafruit IO Key
 ```
 
-Username / Password is different for each person. Also, it is different from the user account of ```https: // io.adafruit.com /```.
+Username / Password is different for each person. Also, it is different from the user account of ```https://io.adafruit.com/```.
 Click on the ```AIO Key``` on the right shoulder of the dashboard to view it, so be sure to check it.
 
 ![Click here to view AIO Key](images/chapxx-sitopp/sito_027_2.png)
@@ -340,21 +340,21 @@ Click on the ```AIO Key``` on the right shoulder of the dashboard to view it, so
 
 When you access the URL issued by Webhooks, you create a mechanism to publish a Topic to Adafruit's ```MQTT broker```.
 
-* Log in to IFTTT ```https: // ifttt.com /```
+* Log in to IFTTT ```https://ifttt.com/```
 * Create if you do not have an account.
 * Click the human icon at the top right → Click “Create” from the pull-down menu.
 * Click "This" on the "Create your own" screen.
 * Input "Webhooks" in the input field "Search services" → Click the displayed "Webhooks" panel.
 * If you are a first-time user, click the “Connect Webhooks” screen.
-* Click the "Receive a Web request" panel → Event Name: Enter "``` M5StickCIRRemoCon``` ".
+* Click the "Receive a Web request" panel → Event Name: Enter "```M5StickCIRRemoCon```".
 * Enter "Adafruit" in "Create trigger" → "That" → "Search services".
 * Click on the "Adafruit" panel that appears.
 * (In the case of the first use) The screen "Connect Adafruit" is displayed. Click "Connect". Scroll down on the pop-up screen and click "AUTHORIZE" under "Authorize IFTTT".
-* Click the "` `Send data to Adafruit IO``` panel.
-* From the "Feed name" options, select the Feed registered with Adafruit, "``` daikin_onoff``` ".
+* Click the "```Send data to Adafruit IO```" panel.
+* From the "Feed name" options, select the Feed registered with Adafruit, "```daikin_onoff```".
 * Click "Add ingredient" at the bottom right of "Data to save" and click EventName.
 * Click "Add ingredient" again, then click on Value1, Value2, Value3.
-* "Data to save" becomes "``` {{EventName}} {{Value1}} {{Value2}} {{Value3}} ```".
+* "Data to save" becomes "```{{EventName}} {{Value1}} {{Value2}} {{Value3}}```".
 * Click “Create action” → “Finish”.
 
 The applet is now complete. Click "settings" at the top right for details.
@@ -366,10 +366,10 @@ The applet is now complete. Click "settings" at the top right for details.
 
 It will be called from Voiceflow later, so let's check it out.
 
-* Access IFTTT's "My Services" on Chrome. ```https: // ifttt.com / my_services```
+* Access IFTTT's "My Services" on Chrome. ```https://ifttt.com/my_services```
 * Open "Webhooks" → "Documentation".
-* Enter "``` M5StickCIRRemoCon``` "in the URL``` {event} ```under" `` Make a POST or GET Web request to``` ".
-* Copy the URL starting with ```https: //``` and write it down in Notepad. @<br>{}
+* Enter "```M5StickCIRRemoCon```" in the URL ```{event}``` under "```Make a POST or GET Web request to```".
+* Copy the URL starting with ```https://``` and write it down in Notepad. @<br>{}
 Example) URL: https://maker.ifttt.com/trigger/M5StickCIRRemoCon/with/key/ (Omitted)
 
 ![Webhooks URL](images/chapxx-sitopp/sito_028.png)
