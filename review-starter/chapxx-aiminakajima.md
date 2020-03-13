@@ -46,7 +46,7 @@ Happy Pass is the "smoothest interaction flow to achieve the goal of that skill"
 The VUI can fork off instead of a single flow, but let's put it aside and start with a success story.
 Let's take a look at the Happy Pass using the Alexa skill "Toast of Toast" that I have released.
 
-! [] (review-starter / images / chapxx-aiminakajima / Voiceflow-happypath.jpeg)
+![](images/chapxx-aiminakajima/Voiceflow-happypath.jpeg)
 
 The solid line is a flow that is not a happy pass, and the dotted line is a flow that is not a happy pass. First of all, if you want to try the core function of the skill, just make a happy pass and it is enough to start.
 
@@ -56,28 +56,28 @@ If you can do so, let's launch Voiceflow. Two types of "Speak" and "Choice" expl
 
 1. Click the Share icon at the top right of the screen.
 
-! [] (review-starter / images / chapxx-aiminakajima / Browser-Test-1.png)
+![](images/chapxx-aiminakajima/Browser-Test-1.png)
 
 2. When the URL for sharing is displayed, click "Copy link" on the right.
 
-! [] (review-starter / images / chapxx-aiminakajima / Browser-Test-2.png)
+![](images/chapxx-aiminakajima/Browser-Test-2.png)
 
 3. This screen is displayed to the person who shared the URL. Click Start Test.
 
-! [] (review-starter / images / chapxx-aiminakajima / Browser-Test-3.png)
+![](images/chapxx-aiminakajima/Browser-Test-3.png)
 
 4. You can test your own voice by entering the text to be spoken by the user in the text form or by pressing and holding the microphone button on the PC.
 It is a good idea to test your voice.
 
-! [] (review-starter / images / chapxx-aiminakajima / Browser-Test-4.png)
+![](images/chapxx-aiminakajima/Browser-Test-4.png)
 
 If you use it on your browser, you will get some kind of feedback. I hope that you can enter feedback comments in the future. From there, improve your VUI and submit beta tests on the Amazon Developer Console or Actions on Google. Finally, you can have it tested on a real machine.
 
 ▼ A beta test invitation screen of Alexa Developer Console
-! [] (review-starter / images / chapxx-aiminakajima / test-alexa.png)
+![](images/chapxx-aiminakajima/test-alexa.png)
 
 ▼ Actions on Google α ・ β test invitation screen
-! [] (review-starter / images / chapxx-aiminakajima / test-google.png)
+![](images/chapxx-aiminakajima/test-google.png)
 
 ## Use Alexa and Google Assistant properly
 
