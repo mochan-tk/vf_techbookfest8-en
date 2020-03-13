@@ -2,7 +2,7 @@ name: build
 on:
   push:
     branches: 
-      - master
+      - locale_en
 jobs:
   build-pdf:
     runs-on: ubuntu-latest
