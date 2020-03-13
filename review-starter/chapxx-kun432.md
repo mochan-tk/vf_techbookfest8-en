@@ -13,7 +13,7 @@ First, log in to Google Spreadsheets with your Google account and create a sprea
 ![](images/chapxx-kun432/s009.png)
 
 - The spreadsheet name is "My recipe data" and the sheet name (tab below) is "Recipe list".
-- Enter ```recipe_name``` for A1 and``` recipe_content``` for B1. The first line is always the heading line. Please note that you cannot specify in Japanese.
+- Enter ```recipe_name``` for A1 and ```recipe_content``` for B1. The first line is always the heading line. Please note that you cannot specify in Japanese.
 - In the second and subsequent rows, enter the recipe name in column A and the ingredients in column B.
 
 Next, create the following project on the Voiceflow side and place the blocks.
@@ -353,7 +353,7 @@ The If block is a block that specifies a condition and branches the processing f
 
 ![](images/chapxx-kun432/s091.png)
 
-Let's set the conditions. Simply thinking, the variable ```varName``` or the variable ``` varContent``` containing the data obtained from the spreadsheet is ```undefined```, so use the equal I think it should be compared. However, this ```undefined``` is a little special programmatically, and it does not work even if it is set as follows.
+Let's set the conditions. Simply thinking, the variable ```varName``` or the variable ```varContent``` containing the data obtained from the spreadsheet is ```undefined```, so use the equal I think it should be compared. However, this ```undefined``` is a little special programmatically, and it does not work even if it is set as follows.
 
 ![](images/chapxx-kun432/s092.png)
 
@@ -361,7 +361,7 @@ Let's set the conditions. Simply thinking, the variable ```varName``` or the var
 \clearpage
 //}
 
-So, twist it a little and try not to judge whether it is ```undefined```, but to judge whether the search result is done properly. First, select "` `slot_user_recipe``` for "Select Variable" at the top.
+So, twist it a little and try not to judge whether it is ```undefined```, but to judge whether the search result is done properly. First, select ```slot_user_recipe``` for "Select Variable" at the top.
 
 ![](images/chapxx-kun432/s098.png)
 
