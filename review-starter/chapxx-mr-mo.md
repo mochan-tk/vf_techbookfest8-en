@@ -31,8 +31,8 @@ You can create unlimited projects for free and use all the core features.
 - PROFESSIONAL
 Multiple people can collaboratively develop voice applications. In addition, all products can be used and unlimited backups can be given priority support.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 - TEAM
@@ -102,8 +102,8 @@ Describes the blocks of the "Basic" function. A simple voice application can be 
 
 > Speak Block allows Alexa to talk to users in different voices and play audio files.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 - Choice Block
@@ -119,8 +119,8 @@ Next, drag and drop the Choice Block and enter the Intent name, “Mul” and �
 If possible, connect with Speak Block.
 ![Choice Block](images/chapxx-mr-mo/vf8.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Finally, drag and drop two Speak Blocks, and enter the text on the setting screen on the right.
@@ -131,8 +131,8 @@ If you can, connect with Choice Block.
 Let's move the created one and check it. You can check the operation on Voiceflow. Go to the "Prototype tab" and click the "Start Test" button.
 ![Test](images/chapxx-mr-mo/vf10.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 When the user selects each of "Maru" and "X", you can see that the responses are different.
@@ -142,8 +142,8 @@ When the user selects each of "Maru" and "X", you can see that the responses are
 Return to the list screen, create from "Create Project" at the bottom of the screen.
 ![Return to list screen](images/chapxx-mr-mo/vf12.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Enter a project name, check Japanese and create a project.

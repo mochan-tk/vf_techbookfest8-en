@@ -121,8 +121,8 @@ Women in Voice Japan ambassador
 //}
 // blankline
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 // sideimage [fukumura-kaigo-icon] [24mm] [side = L, sep = 7mm, border = on] {

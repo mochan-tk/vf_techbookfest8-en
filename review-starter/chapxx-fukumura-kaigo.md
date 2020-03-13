@@ -129,8 +129,8 @@ Finally, add an EXIT block to end the skill, and that's it.
 Press the "Upload to Alexa" button to complete your skill.
 Just say "Alexa, open my emergency contact" on the test console, Alexa app, or Echo device. It should return an answer.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ## Create skills even for non-engineers!

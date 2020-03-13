@@ -48,8 +48,8 @@ I think that Google Home mini was bought at a discount sale for about 3000 yen. 
 ![Parts used](images/chapxx-sitopp/sito_002.png)
 
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ## Infrared remote control created with M5StickC
@@ -280,8 +280,8 @@ https://lab.sasapea.mydns.jp/2019/06/28/m5stickc-ir/
 * Make M5StickC an infrared remote control (example of various TV manufacturers)
 https://kuratsuki.net/2019/07/
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ## Adafruit MQTT settings
@@ -332,8 +332,8 @@ Click on the ```AIO Key``` on the right shoulder of the dashboard to view it, so
 
 ![Click here to view AIO Key](images/chapxx-sitopp/sito_027_2.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ## Make a simple MQTT publisher with IFTTT
@@ -608,8 +608,8 @@ If you get an error, try the following:
 
 Let's test again. Did it move this time?
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 
@@ -733,8 +733,8 @@ This completes one of the functions.
 In addition, I think that the range of infrared rays sent from the M5StickC + infrared unit is about 1 meter and 50 cm, so if you think it doesn't move, bring it closer and try.
 
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ## Try to support Amazon Alexa
@@ -788,8 +788,8 @@ If it works well on the simulator, try it on your Amazon Echo device.
 That's all for hands-on. Did it move safely? @ <br> {}
 There may be differences depending on the environment, and there may be parts that are different from the version when writing the manuscript, so I hope that you can try it out while googled.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 #### Finally

@@ -22,8 +22,8 @@ To get to know the user deeply (specifically define), we use a tool called Perso
 The persona is the most typical user profile for the service.
 By specifying the user profile and fitting it to the user, we will be able to provide more satisfactory services.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 You do not need to think too much.
@@ -75,8 +75,8 @@ In the example, the usage scene of children using skills is imagined as follows.
 
 Therefore, we thought that audio type A was suitable for both input and output.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### Conversation flow and content
@@ -95,8 +95,8 @@ Again, we aim to make it more fun to prepare yourself.
 
 ![Conversation flow for second daughter](images/chapxx-magistralla/suzu01.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### Create skills with Voiceflow
@@ -111,8 +111,8 @@ In the example, skills are created from the conversation flow of the second daug
 
 With this, the skill for exclusive use of the second daughter is completed.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ## To increase engagement
@@ -128,8 +128,8 @@ In the example, we will register synonyms for "Done".
 
 Now you can answer "Is it ready", "I'm done", "Yes", "Yeah" to the question "Are you ready?"
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### Date and time information
@@ -145,8 +145,8 @@ https://forum.voiceflow.com/t/getting-the-users-time-zone-in-your-skill/314
 
 The day before the piano, I can now say, "Tomorrow is the piano."
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### SSML
@@ -183,8 +183,8 @@ Enter the `audio` tag in the" speak "block. For Alexa skills, you can copy and p
 
 Now you can tell the correct answer by sound.
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 #### Speechcons

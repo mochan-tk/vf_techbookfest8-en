@@ -52,8 +52,8 @@ Assuming this as a hypothesis, when thinking of a skill that can fully demonstra
 That's why we think that "telling the story" skills may be the right fit for the growing user market today. @ <br> {}
 
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### Smooth transition from passive to active behavior
@@ -126,8 +126,8 @@ We can conclude that every story in the world is structured.
 It asserts that the same is true for narrative skills in Voice UI.
 
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 
@@ -370,8 +370,8 @@ Indicate how you want your target audience to use this skill and feel it. "I wan
 Is there anything else that can be achieved by making this skill? For example, a record remains in Google Spreadsheet. If there is such a thing, fill it out.
 
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 

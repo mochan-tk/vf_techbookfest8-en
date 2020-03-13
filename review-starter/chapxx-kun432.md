@@ -34,8 +34,8 @@ By the way, the last ```<audio src = ~``` part uses "Alexa Skills Kit sound libr
 @ <href> {https://developer.amazon.com/ja-JP/docs/alexa/custom-skills/ask-soundlibrary.html}
 //}
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### "Integration block" that links with Google Spreadsheet
@@ -48,8 +48,8 @@ Click "Google Sheets" (Google Sheets is called Google Sheets in English) in the 
 
 ![](images/chapxx-kun432/s002-2.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 First, select what you want to do with your spreadsheet data. Retrieve Data (read data from spreadsheet) / Create Data (add one row of data to spreadsheet) / Update Data (update one row of data in spreadsheet) / Delete Data (delete data of spreadsheet) You can choose from four. This time, I want to read the data of recipe name and material name from Google spreadsheet, so click "Retrieve Data".
@@ -60,8 +60,8 @@ Next, link to your Google account to access Google spreadsheets. Click “+ Add 
 
 ![](images/chapxx-kun432/s004.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 When you link accounts for the first time, the login screen of your Gooogle account will be displayed as follows. Click Login with Google.
@@ -72,8 +72,8 @@ The Google account selection screen will be displayed. Select the account that c
 
 ![](images/chapxx-kun432/s006-3.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 If it is displayed as shown below, the link with the Google account is completed. Click "Using Sheet" to continue.
@@ -84,8 +84,8 @@ In "Using Sheet", select the spreadsheet to access from Voiceflow. Select a spre
 
 ![](images/chapxx-kun432/s011.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Once you have selected your spreadsheet, you will see “With Settings”. Here, the search conditions are originally specified, but in the case of random, select "Row Number" from the list in "Column" on the left, and click "Next" without entering anything in "Value to Match" on the right Click.
@@ -96,8 +96,8 @@ Once you have selected your spreadsheet, you will see “With Settings”. Here,
 
 ![](images/chapxx-kun432/s036.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 In "Test Integration", you can actually test the connection to Google Spreadsheet. Click "Test Integration".
@@ -120,8 +120,8 @@ If ```varName``` is displayed at the end of``` sessions``` etc. displayed just b
 
 ![](images/chapxx-kun432/s039.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 It is OK if two variables are created as shown below. Click the top icon of the three leftmost icons to return to the "Blocks menu".
@@ -132,8 +132,8 @@ Next, link the data obtained from Google Spreadsheet with the variables. This al
 
 ![](images/chapxx-kun432/s051.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 The link between the variable and the acquired data is done by "Mapping Output". Click "+ Add Mapping".
@@ -144,8 +144,8 @@ Click "+ Add Mapping" to select "Column" and "Variable" respectively. Specify th
 
 ![](images/chapxx-kun432/s053.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Now, let's link. Select ```recipe_name``` for" Column "and``` varName``` for "Variable".
@@ -158,8 +158,8 @@ It is OK if both can be linked and look like this. Click Next to return to the c
 
 ![](images/chapxx-kun432/s058.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Now, let's use the data obtained from the spreadsheet from within the skill. Place a Speak block next to the Integration block, and connect it to the Integration block that doesn't say "fail".
@@ -176,8 +176,8 @@ Let's test it by uploading it to the Alexa Developer Console. It is OK if you ca
 
 ![](images/chapxx-kun432/s062.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### In case the Integration block fails
@@ -214,8 +214,8 @@ Add a Choice block and a Speak block between the first Speak block and the Integ
 
 ![](images/chapxx-kun432/s072.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Let's make intent / sample utterance / slot. Click the Choice block to create an intent first. Enter ```ask_recipe_intent` in the" Name new intent or selecting existing intent "and click" Create ". This will be the intent name.
@@ -226,8 +226,8 @@ A new section called Utterances appears. Register the sample utterance here. In 
 
 ![](images/chapxx-kun432/s111.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Next, select the ```slot_recipe_name``` part with the cursor, and it will be displayed as follows. Click" Create ".
@@ -238,8 +238,8 @@ The slot creation screen is displayed. ```Slot_recipe_name``` selected earlier w
 
 ![](images/chapxx-kun432/s113.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 When you return to the Choice block setting screen, the sample utterance ```slot_recipe_name``` has changed to the specified color. In this way, sample utterances including slots are created. Finally, don't forget to click the ENTER key to register as a sample utterance.
@@ -250,8 +250,8 @@ If the sample utterance above is displayed below the input field, the sample utt
 
 ![](images/chapxx-kun432/s115.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 As before, select ```slot_recipe_name``` with the cursor. ```Slot_recipe_name``` is already registered, so just select it from the list.
@@ -273,8 +273,8 @@ Tell me the ingredients for {slot_recipe_name}
 {slot_recipe_name}
 ```
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 It is OK if it finally feels like this.
@@ -291,8 +291,8 @@ Make the following entries:
 I'm sorry, I didn't hear well. For example, say "I want to know hamburger recipes".
 ```
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### Get spreadsheet data by specifying conditions
@@ -305,8 +305,8 @@ In the case of random, left side "Row Number" was selected, right side "Value to
 
 ![](images/chapxx-kun432/s082.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Click Next for Mapping Output, go to Test Integration, and click Test Integration.
@@ -317,8 +317,8 @@ A screen different from the random case came out. Enter "curry rice" in ```slot_
 
 ![](images/chapxx-kun432/s085.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 You can get curry and rice data properly. In this way, if you use a variable as a search condition in "With Settings", you can test by specifying the value of the variable yourself. Search by another recipe name and confirm that data that meets the conditions can be obtained.
@@ -329,8 +329,8 @@ It works correctly on the Alexa Developer Console.
 
 ![](images/chapxx-kun432/s087.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ### Processing when there is no search result
@@ -345,8 +345,8 @@ Delete the line of the Integration block and the line of the Speak block (the on
 
 ![](images/chapxx-kun432/s090.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 The If block is a block that specifies a condition and branches the processing flow according to the result. Here, branching is performed when data can be searched from the recipe name in the Integration block and when data cannot be searched.
@@ -357,8 +357,8 @@ Let's set the conditions. Simply thinking, the variable ```varName` '' or the va
 
 ![](images/chapxx-kun432/s092.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 So, twist it a little and try not to judge whether it is ```undefined```, but to judge whether the search result is done properly. First, select "` `slot_user_recipe``` for" Select Variable "at the top.
@@ -369,8 +369,8 @@ Next, as for "Value" on the lower side, in the initial state, you can only enter
 
 ![](images/chapxx-kun432/s094.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Then, the lower side also changes to "Select Variable", so select ```varName```.
@@ -381,8 +381,8 @@ In other words, the check is that if the recipe name spoken by the user (```slot
 
 ![](images/chapxx-kun432/s097.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Let's tell Alexa each result in a Speak block. Connect the original Speak block to "1" of the If block. The content of the utterance is changed a little.
@@ -393,8 +393,8 @@ Add another Speak block, connect it from the "else" of the If block, and set as 
 
 ![](images/chapxx-kun432/s101.png)
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 Finally, test it on the Alexa developer console, and if you can speak out if you can not get the result properly, you are done. Thank you
@@ -408,8 +408,8 @@ Advanced expression (IF and SET blocks)-Voiceflow Docs @ <br> {}
 @ <href> {https://docs.voiceflow.com/voiceflow-documentation/logic-in-voiceflow/advanced-expression-if-and-set-blocks}
 //}
 
-// embed [latex] {
-\ clearpage
+//embed[latex]{
+\clearpage
 //}
 
 ## Notes on using Google Spreadsheet
