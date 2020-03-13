@@ -27,7 +27,8 @@ language: en
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
   Voiceflow & VUI BIBLE
-subtitle:
+subtitle: 
+  Introduction to Voiceflow & VUI
   
 
 # 著者名。「, 」で区切って複数指定できる
