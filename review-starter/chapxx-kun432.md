@@ -12,17 +12,17 @@ First, log in to Google Spreadsheets with your Google account and create a sprea
 
 ![](images/chapxx-kun432/s009.png)
 
--The spreadsheet name is "My recipe data" and the sheet name (tab below) is "Recipe list".
--Enter ```recipe_name``` for A1 and``` recipe_content``` for B1. The first line is always the heading line. Please note that you cannot specify in Japanese.
--In the second and subsequent rows, enter the recipe name in column A and the ingredients in column B.
+- The spreadsheet name is "My recipe data" and the sheet name (tab below) is "Recipe list".
+- Enter ```recipe_name``` for A1 and``` recipe_content``` for B1. The first line is always the heading line. Please note that you cannot specify in Japanese.
+- In the second and subsequent rows, enter the recipe name in column A and the ingredients in column B.
 
 Next, create the following project on the Voiceflow side and place the blocks.
 
 ![](images/chapxx-kun432/s069.png)
 
--The project name will be “My home recipe”. Select only the language "Japanese (ja-JP)".
--Once the project is created, place one Speak block and connect it with the Start of the Home block with a line.
--Set the Speak block as follows.
+- The project name will be “My home recipe”. Select only the language "Japanese (ja-JP)".
+- Once the project is created, place one Speak block and connect it with the Start of the Home block with a line.
+- Set the Speak block as follows.
 
 // list [] [] {
 Welcome to our recipe skills. This skill will teach you a random recipe. Today ’s recommendation is <audio src = "soundbank: // soundlibrary / ui / gameshow / amzn \ _ui \ _sfx \ _gameshow \ _intro \ _01" />
@@ -416,19 +416,19 @@ Advanced expression (IF and SET blocks)-Voiceflow Docs @ <br> {}
 
 It is easy and convenient to use Google Spreadsheets, but it has some weaknesses.
 
--My personal impression is that accessing Google spreadsheets is a bit slower than accessing general APIs. Keep in mind that repeated access to a spreadsheet in a skill may impair the tempo and rhythm of the user's use of the skill.
--Also, frequent access to Google Spreadsheets may be restricted by Google. This should be fine for general skill use, but be aware that if your skill becomes popular, you may be subject to this restriction.
--If a large amount of data exists in the Google spreadsheet (such as a large number of rows or columns, or a large number of characters in a cell), the response may be slow or data may not be obtained. It depends on the combination of rows, columns, data in cells, etc., so it cannot be said unconditionally, but at most we recommend keeping it to less than 1000 rows.
--When searching with Google Spreadsheet, you can specify only one search target column. Note that you cannot execute complex search conditions like you would do with a general database.
+- My personal impression is that accessing Google spreadsheets is a bit slower than accessing general APIs. Keep in mind that repeated access to a spreadsheet in a skill may impair the tempo and rhythm of the user's use of the skill.
+- Also, frequent access to Google Spreadsheets may be restricted by Google. This should be fine for general skill use, but be aware that if your skill becomes popular, you may be subject to this restriction.
+- If a large amount of data exists in the Google spreadsheet (such as a large number of rows or columns, or a large number of characters in a cell), the response may be slow or data may not be obtained. It depends on the combination of rows, columns, data in cells, etc., so it cannot be said unconditionally, but at most we recommend keeping it to less than 1000 rows.
+- When searching with Google Spreadsheet, you can specify only one search target column. Note that you cannot execute complex search conditions like you would do with a general database.
 
 If you meet the above restrictions or are not functional enough with Google Spreadsheets, we recommend using a full-fledged database such as Airtable or Firebase.
 
--Airtable (@ <href> {https://airtable.com/})
--Firebase (@ <href> {https://firebase.google.com/})
+- Airtable (@ <href> {https://airtable.com/})
+- Firebase (@ <href> {https://firebase.google.com/})
 
 ## Finally
 
 What do you think. When you read data using Google Spreadsheets, you get a database-like atmosphere. This time, only the data reference was introduced for the convenience of the magazine, but of course it is also possible to register / update / delete the data in the spreadsheet. For more information, see the following site. Also, besides Google Spreadsheet integration, there are many Voiceflow tips, so please take a look. @ <br> {}
 
--Voiceflow Summer Holiday Advent Calendar @ <br> {}
+- Voiceflow Summer Holiday Advent Calendar @ <br> {}
 @ <href> {https://qiita.com/kun432/items/666ae13f097004ea7935}

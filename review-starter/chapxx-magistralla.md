@@ -8,8 +8,8 @@ In this chapter, I'd like to think about how to create a skill that allows you t
 ### Audience
 This chapter is for the following people:
 
--Those who have touched Voiceflow a little
--Those who feel comfortable talking with VUI Assistant
+- Those who have touched Voiceflow a little
+- Those who feel comfortable talking with VUI Assistant
 
 ## Let's be conscious
 ### What is engagement?
@@ -54,8 +54,8 @@ Here, I will write two elementary school student personas so that you can see th
 
 It's easy, but considering the timetable skills along each persona
 
--Since my eldest daughter is almost a fourth grader, I can imagine preparing for the next day by myself.
--Since the second daughter is not yet enrolled, she is not accustomed to preparing for the next day alone, so "Skills to prepare together"
+- Since my eldest daughter is almost a fourth grader, I can imagine preparing for the next day by myself.
+- Since the second daughter is not yet enrolled, she is not accustomed to preparing for the next day alone, so "Skills to prepare together"
 
 Seems to be pleased. @ <br> {}
 
@@ -70,8 +70,8 @@ There is no need to consider both input and output by voice. It can be combined 
 
 In the example, the usage scene of children using skills is imagined as follows.
 
--I am staring because I watch the timetable distributed by the school
--I can't use both hands to put the textbook in the school bag
+- I am staring because I watch the timetable distributed by the school
+- I can't use both hands to put the textbook in the school bag
 
 Therefore, we thought that audio type A was suitable for both input and output.
 
@@ -154,9 +154,9 @@ SSML is called Speech Synthesis Markup Language, and is an XML-based representat
 It makes it easier to effectively appeal to the user, such as "fasten", "increase", or "change intonation" the utterance speed.
 The tags supported by each vendor are different or have their own tags. When using them, check which tags can be used before using them.
 
--alexa
+- alexa
   -https://developer.amazon.com/ja-JP/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html
--google
+- google
   -https://cloud.google.com/text-to-speech/docs/ssml?hl=en
 
 
@@ -164,9 +164,9 @@ The tags supported by each vendor are different or have their own tags. When usi
 If you want your assistant to play sound effects, use the sound library.
 The sound library is released by each vendor as sound effects for skills and can be used freely.
 
--Alexa Skills Kit sound library
+- Alexa Skills Kit sound library
   -https://developer.amazon.com/ja-JP/docs/alexa/custom-skills/ask-soundlibrary.html
--Google Assistant Sound Library
+- Google Assistant Sound Library
   -https://developers.google.com/assistant/tools/sound-library
 
 
@@ -191,7 +191,7 @@ Now you can tell the correct answer by sound.
 Use Speechcon if you can hear it in a conversation with your assistant. @ <br> {}
 Speechcon is a special word that the assistant speaks expressively.
 
--Alexa
+- Alexa
   -https://developer.amazon.com/ja-JP/docs/alexa/custom-skills/speechcon-reference-interjections-japanese.html
 
 
@@ -211,7 +211,7 @@ Now, "Hello" is now expressive.
 ## in conclusion
 Voiceflow has other features to increase engagement, including:
 
--Use user specific information in User category "user info" in Blocks menu
--Link externally with the Advanced category "Integrations" in the Blocks menu
+- Use user specific information in User category "user info" in Blocks menu
+- Link externally with the Advanced category "Integrations" in the Blocks menu
 
 Let's enjoy the skill development that allows users to think and use them with attachment.

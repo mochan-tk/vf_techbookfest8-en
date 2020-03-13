@@ -15,29 +15,29 @@ As of January 1, 2020, Voiceflow users have expanded to more than 21,000 people 
 ### About the product
 Three types of products are available. The contents of each are described below.
 
--Alexa Skills
+- Alexa Skills
 You can create Alexa skills without coding. Also, 5% of the world's Alexa skills are made from Voiceflow. (Alexa skills are functions and services that can be used with the Alexa, an AI assistant developed by Amazon.)
--Google Actions
+- Google Actions
 You can create Google Actions without coding. (Google Action is a function or service that can be used with the Google Assistant (Assistant), an AI assistant developed by Google.)
--IVR (BETA)
+- IVR (BETA)
 You can create the latest IVR system without coding. Modern IVR technology must be easy to design, prototype, and repeat. It helps you find what you are looking for quickly, reduce operating costs and increase customer loyalty. With Voiceflow you can build your skills faster.
 
 ### About rate plans
 Four types of plans are available, and contracts can be made on a monthly or yearly basis. For personal use, you can develop a free "BASIC" plan. Each content is described below.
 (As of January 1, 2020, the rate plan has been revised several times)
 
--BASIC
+- BASIC
 You can create unlimited projects for free and use all the core features.
--PROFESSIONAL
+- PROFESSIONAL
 Multiple people can collaboratively develop voice applications. In addition, all products can be used and unlimited backups can be given priority support.
 
 // embed [latex] {
 \ clearpage
 //}
 
--TEAM
+- TEAM
 In addition to the functions of PROFESSIONAL, you can create an unlimited number of workspaces. In addition, there is dedicated support.
--ENTERPRISE
+- ENTERPRISE
 The plan to choose when you need larger requirements. Contact us for more information
 
 [https://www.voiceflow.com/pricing](https://www.voiceflow.com/pricing)
@@ -46,12 +46,12 @@ The plan to choose when you need larger requirements. Contact us for more inform
 ### About the documentation
 Documents are explained in an easy-to-understand video format. Please refer to "Get started" at the following URL. What is explained in the video is summarized in [Video description] below.
 
--Documentation
+- Documentation
 [https://docs.voiceflow.com/home/get-started-with-voiceflow/](https://docs.voiceflow.com/home/get-started-with-voiceflow)
 
 ![Document](images/chapxx-mr-mo/vf21.png)
 
--Tutorial
+- Tutorial
 [https://learn.voiceflow.com/en/collections/1499932-learn-the-basics#getting-started](https://learn.voiceflow.com/en/collections/1499932-learn-the-basics# getting-started)
 
 ![Tutorial](images/chapxx-mr-mo/vf22.png)
@@ -61,13 +61,13 @@ Documents are explained in an easy-to-understand video format. Please refer to "
 
 In addition, opinions are actively exchanged below, so please use them together.
 
--Forum
+- Forum
 [https://forum.voiceflow.com/](https://forum.voiceflow.com/)
 
--Facebook
+- Facebook
 [https://www.facebook.com/groups/voiceflowgroup/](https://www.facebook.com/groups/voiceflowgroup/)
 
--Voiceflow Japan User Group
+- Voiceflow Japan User Group
 [https://www.facebook.com/groups/vfjug/](https://www.facebook.com/groups/vfjug/)
 
 
@@ -75,12 +75,12 @@ In addition, opinions are actively exchanged below, so please use them together.
 ## How to use Voiceflow
 This section describes how to create an account, how to create a voice application, and how to check the operation.
 
--Create account
--Screen description
--Basic block description
--Creation procedure
--Operation check
--Procedure for creating the next and subsequent projects
+- Create account
+- Screen description
+- Basic block description
+- Creation procedure
+- Operation check
+- Procedure for creating the next and subsequent projects
 
 ### Create an account
 Open the following URL and click the "Sign Up" button on the upper right.
@@ -98,7 +98,7 @@ Drag the blocks from the Blocks menu on the left and drop them on the Design on 
 Describes the blocks of the "Basic" function. A simple voice application can be created with only the following two blocks.
 ![Explanation of "Basic" function block](images/chapxx-mr-mo/vf6.png)
 
--Speak Block
+- Speak Block
 
 > Speak Block allows Alexa to talk to users in different voices and play audio files.
 
@@ -106,7 +106,7 @@ Describes the blocks of the "Basic" function. A simple voice application can be 
 \ clearpage
 //}
 
--Choice Block
+- Choice Block
 
 > Define user utterances and branches in the Choice Block. When the user speaks one of the options in the utterance list, it follows the path of that option. Follow the ELSE pass when the user talks about not being an option.
 
@@ -191,13 +191,13 @@ Click the setting button on the upper right and get the link from "Downloadable 
 
 
 ### Useful settings to know
--Change project name
+- Change project name
 You can change the "Display Name" and "Invocation Name" by clicking the settings button in the upper right corner.
 
 ![Change project name](images/chapxx-mr-mo/vf18.png)
 
 
--Unlink account
+- Unlink account
 To reset the account link between Amazon and Google, first select "Account" from the account name at the top right of the list screen, and click each "Reset". Then, when uploading the skill, please link the account correctly.
 
 ![Unlink account](images/chapxx-mr-mo/vf31.png)
