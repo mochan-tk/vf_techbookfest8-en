@@ -20,22 +20,21 @@ inherit: ["config-starter.yml"]
 # ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
 bookname: Voice_UI_Experts_Project
 # 記述言語。省略した場合はja
-language: ja
+language: en
 
 # 書名
 # 読みを入れる例 booktitle: {name: "Re:VIEW EPUBサンプル", file-as: "リビューイーパブサンプル"}
 # （タイトルやサブタイトルが長い場合は、好みの箇所に改行を入れてください。）
 booktitle: |-
-  Voiceflow & VUI
-subtitle:
-  虎の巻
+  Voiceflow & VUI BIBLE
+subtitle: 
+  Introduction to Voiceflow & VUI
   
 
 # 著者名。「, 」で区切って複数指定できる
 # 読みを入れる例 aut: [{name: "青木峰郎", file-as: "アオキミネロウ"}, {name: "武藤健志", file-as: "ムトウケンシ"}, {name: "高橋征義", file-as: "タカハシマサヨシ"}, {name: "角征典", file-as: "カドマサノリ"}]
 aut:
   - name:    Voice UI Experts
-    file-as: ボイスユーアイエキスパーツ
 
 # 以下はオプション
 # 以下はオプション(autと同じように配列書式で複数指定可能)。
@@ -56,7 +55,7 @@ aut:
 # a-cmm, cmm: 解釈・分析・考察者
 # a-csl, csl: 監修者
 # a-dsr, dsr: デザイナ
-dsr: 小嶋 愛弓
+dsr: Ayumi Kojima 
 # a-edt, edt: 編集者
 edt: Voice UI Experts
 # a-ill, ill: イラストレータ
@@ -68,7 +67,7 @@ edt: Voice UI Experts
 # a-pht, pht: 撮影責任者
 # a-pbl, pbl: 出版社（発行所）
 # a-prt, prt: 印刷所
-prt: 日光企画様
+#prt: 日光企画様
 # a-red, red: 項目の枠組起草者
 # a-rev, rev: 評論者
 # a-spn, spn: 援助者
@@ -82,9 +81,9 @@ date: 2020-02-29
 # 複数指定する場合は次のように記述する
 # [["初版第1刷の日付", "初版第2刷の日付"], ["第2版第1刷の日付"]]
 # 日付の後ろを空白文字で区切り、任意の文字列を置くことも可能。
-history: [["2020-02-29 ver 1.0"]]
+history: [["2020-02-29 ver 1.0", "2020-03-13 ver 1.0-en"]]
 # [experimental] 新刊を頒布したイベント名（例：「技術書典6（2019年春）新刊」）
-pubevent_name: 技術書典8（2020年春）新刊
+pubevent_name: Tech Book Festa 8, Spring 2020 newly published
 # 権利表記(配列で複数指定可)
 rights: (C) 2020 Voice UI Experts
 # description: 説明

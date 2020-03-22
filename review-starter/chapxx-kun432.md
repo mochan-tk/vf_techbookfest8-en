@@ -1,34 +1,34 @@
-# Google Spreadsheet Integration
+# Let's work with Google Spreadsheets
 
-If you use Voiceflow's Google spreadsheet link function, you can use it as a simple database that can be used with the same ease of use as your usual Excel, so the range of skill development will expand at a stretch. Let's make use of it to create higher-grade skills.
+With Voiceflow's Google Spreadsheet integration feature, you can use it as a simple database with the same ease of use as your usual Excel, which will dramatically broaden your skill development. Let's make the most of it and take your skills to the next level.
 
-## Randomly call spreadsheet data
+## Randomly call data in a spreadsheet
 
-First, let's do some random data extraction from the sheet while learning the basics of using Voiceflow with Google spreadsheets. As a sample, let's create a skill that will randomly tell you the recommended recipes and their ingredients registered in Google Spreadsheet.
+First, let's learn the basics of how to use Voiceflow's Google Spreadsheet integration while also doing some random data retrieval from the sheet. As a sample, let's create a skill that randomly teaches you the recommended recipes and their ingredients that you have in your Google spreadsheet.
 
-### Creating a spreadsheet and basic skills
+### Create a spreadsheet and create a basic part of the skill
 
 First, log in to Google Spreadsheets with your Google account and create a spreadsheet like the one below.
 
 ![](images/chapxx-kun432/s009.png)
 
-- The spreadsheet name is "My recipe data" and the sheet name (tab below) is "Recipe list".
-- Enter ```recipe_name``` for A1 and ```recipe_content``` for B1. The first line is always the heading line. Please note that you cannot specify in Japanese.
-- In the second and subsequent rows, enter the recipe name in column A and the ingredients in column B.
+- The name of the spreadsheet should be "My Recipe Data" and the name of the sheet (bottom tab) should be "Recipe List".
+- Enter ```recipe_name``` in A1 and ```recipe_content``` in B1. The first line is always the heading line. Please note that it is not possible to specify in Japanese.
+- After the second row, enter the name of the recipe in column A and the ingredients in column B.
 
-Next, create the following project on the Voiceflow side and place the blocks.
+Next, create a project like the following on the Voiceflow side and place the blocks.
 
 ![](images/chapxx-kun432/s069.png)
 
-- The project name will be “My home recipe”. Select only the language "Japanese (ja-JP)".
-- Once the project is created, place one Speak block and connect it with the Start of the Home block with a line.
-- Set the Speak block as follows.
+- The name of the project will be "My Home Recipes". Please select only "Japanese (ja-JP)" as the language.
+- Once the project is created, place one Speak block and line it up with the Home block Start.
+- The Speak block should be set as follows.
 
 //list[][]{
-Welcome to our recipe skills. This skill will teach you a random recipe. Today ’s recommendation is <audio src="soundbank://soundlibrary/ui/gameshow/amzn\_ui\_sfx\_gameshow\_intro\_01"/>
+Welcome to my home recipe skills. In this skill, I'll randomly give you a recommended recipe. Today's recommendation is <audio src="soundbank://soundlibrary/ui/gameshow/amzn\_ui\_sfx_gameshow\_intro\_01"/>
 //}
 
-By the way, the last ```<audio src = ~``` part uses "Alexa Skills Kit sound library" to play sound effects.
+By the way, the last part of the ```<audio src=~``` is to play the sound effects using the Alexa Skills Kit sound library.
 
 //note[Alexa Skills Kit sound library]{
 @<href>{https://developer.amazon.com/ja-JP/docs/alexa/custom-skills/ask-soundlibrary.html}
@@ -38,13 +38,13 @@ By the way, the last ```<audio src = ~``` part uses "Alexa Skills Kit sound libr
 \clearpage
 //}
 
-### "Integration block" that links with Google Spreadsheet
+### "Integration blocks" that work with Google spreadsheets
 
-The integration with Google Spreadsheet uses "Integration block". From the Advanced in the Blocks menu on the left, drag and drop the Integration block to the right of the Speak block and connect it with a line.
+Use the "Integration block" to work with Google Spreadsheets. From Advanced in the Blocks menu on the left, drag and drop the Integration block to the right of the Speak block and connect it with a line.
 
 ![](images/chapxx-kun432/s002.png)
 
-Click "Google Sheets" (Google Sheets is called Google Sheets in English) in the settings of the Integration block displayed on the right.
+In the Integration block settings that appear on the right, click on "Google Sheets" (Google spreadsheets are called Google Sheets in English).
 
 ![](images/chapxx-kun432/s002-2.png)
 
@@ -52,11 +52,11 @@ Click "Google Sheets" (Google Sheets is called Google Sheets in English) in the 
 \clearpage
 //}
 
-First, select what you want to do with your spreadsheet data. Retrieve Data (read data from spreadsheet) / Create Data (add one row of data to spreadsheet) / Update Data (update one row of data in spreadsheet) / Delete Data (delete data of spreadsheet) You can choose from four. This time, I want to read the data of recipe name and material name from Google spreadsheet, so click "Retrieve Data".
+First, select what you want to do with the data in the spreadsheet: Retrieve Data/Create Data (add one row of data to the spreadsheet), Update Data (update one row of data in the spreadsheet), or Delete Data (delete data in the spreadsheet). This time, I want to retrieve the recipe name and ingredient name data from the Google spreadsheet, so I click on "Retrieve Data".
 
 ![](images/chapxx-kun432/s003-2.png)
 
-Next, link to your Google account to access Google spreadsheets. Click “+ Add User”.
+Next, tie it to your Google account to access your Google spreadsheet. Click on "+Add User".
 
 ![](images/chapxx-kun432/s004.png)
 
@@ -64,11 +64,11 @@ Next, link to your Google account to access Google spreadsheets. Click “+ Add 
 \clearpage
 //}
 
-When you link accounts for the first time, the login screen of your Gooogle account will be displayed as follows. Click Login with Google.
+If this is your first time, you will see the login screen of your Gooogle account as shown below. Click on "Login with Google".
 
 ![](images/chapxx-kun432/s005.png)
 
-The Google account selection screen will be displayed. Select the account that created the Google spreadsheet. You may be prompted to enter your account password. In that case, please log in with your Google account and password. Then "allow" access to Google Spreadsheets from Voiceflow.
+The Google account selection screen will appear and you will select the account where you created the Google spreadsheet. You may be prompted to enter your account password. In this case, please log in with your Google account and password. Then "allow" access to the Google spreadsheet from Voiceflow.
 
 ![](images/chapxx-kun432/s006-3.png)
 
@@ -76,11 +76,11 @@ The Google account selection screen will be displayed. Select the account that c
 \clearpage
 //}
 
-If it is displayed as shown below, the link with the Google account is completed. Click "Using Sheet" to continue.
+If you see the following, your Google account has been connected to your Google account. Click on the "Using Sheet" to proceed.
 
 ![](images/chapxx-kun432/s008.png)
 
-In "Using Sheet", select the spreadsheet to access from Voiceflow. Select a spreadsheet name from "Spreadsheet" and a sheet name (tab name below) from "Sheet". In the case of the first spreadsheet created this time, select “My recipe data” for “Spreadsheet” and “Recipe list” for “Sheet”. (If you cannot see the sheet name, please scroll down a little.)
+In the "Using Sheet", select the spreadsheet to be accessed from Voiceflow. Select a spreadsheet name in Spreadsheet and a sheet name (tab name at the bottom) in Sheet from the list, respectively. In the case of the first spreadsheet you created this time, select "My Recipe Data" in the "Spreadsheet" and "Recipe List" in the "Sheet". (If you can't see the sheet name, scroll down a bit.)
 
 ![](images/chapxx-kun432/s011.png)
 
@@ -88,11 +88,11 @@ In "Using Sheet", select the spreadsheet to access from Voiceflow. Select a spre
 \clearpage
 //}
 
-Once you have selected your spreadsheet, you will see “With Settings”. Here, the search conditions are originally specified, but in the case of random, select "Row Number" from the list in "Column" on the left, and click "Next" without entering anything in "Value to Match" on the right Click.
+Once the spreadsheet has been selected, "With Settings" will appear. If it's random, select "Row Number" from the list in "Column" on the left, and click "Next" without entering anything in "Value to Match" on the right.
 
 ![](images/chapxx-kun432/s035.png)
 
-"Mapping Output" is also set later, so just click "Next".
+The "Mapping Output" part is also set up later, so click "Next" as it is.
 
 ![](images/chapxx-kun432/s036.png)
 
@@ -100,23 +100,23 @@ Once you have selected your spreadsheet, you will see “With Settings”. Here,
 \clearpage
 //}
 
-In "Test Integration", you can actually test the connection to Google Spreadsheet. Click "Test Integration".
+Test Integration allows you to actually test the connection to a Google spreadsheet. Click on "Test Integration".
 
 ![](images/chapxx-kun432/s037.png)
 
-It is successful if the recipe name and ingredients listed in the spreadsheet are displayed under "Test Integration". Click Test Integration several times to see the results change randomly.
+Under "Test Integration", if you see the recipe name and ingredients listed in the spreadsheet, you've succeeded. Click "Test Integration" several times to make sure that the results change randomly.
 
 ![](images/chapxx-kun432/s014.png)
 
-### Use spreadsheet data in your skill using variables
+### Using variables to use spreadsheet data within a skill
 
-You have linked with Google Spreadsheets, but you still can't use that data from within your skill. You need to use "variables" to use the data obtained from the spreadsheet in your skill. Let's create a variable first.
+I've been able to work with Google Spreadsheets, but I can't use that data from within the skill yet. You need to use "variables" in order to use the data retrieved from the spreadsheet in your skills. First, let's create a variable.
 
-Create variables from the "Variables Menu". Click the icon at the bottom of the three vertical icons on the left of the screen to switch the menu. Enter the variable name in the input form just below "Create Variable" and press the ENTER key to create the variable. First, type ```varName``` and press ENTER.
+You can create a variable from the "Variables menu". Click on the bottom icon from among the three vertical icons on the leftmost side of the screen to switch the menu. Enter the name of the variable in the input form immediately below "Create Variable" and press ENTER key to create the variable. First, type ```varName``` and press ENTER.
 
 ![](images/chapxx-kun432/s016-2.png)
 
-If ```varName``` is displayed at the end of ```sessions``` etc. displayed just below the input field, the variable has been successfully created. Similarly, create a variable called ```varContent```.
+If you see ```varName``` at the end of ```sessions```, etc., just below the input field, then the variable has been successfully created. Similarly, create a variable called ```varContent```.
 
 ![](images/chapxx-kun432/s039.png)
 
@@ -124,11 +124,11 @@ If ```varName``` is displayed at the end of ```sessions``` etc. displayed just b
 \clearpage
 //}
 
-It is OK if two variables are created as shown below. Click the top icon of the three leftmost icons to return to the "Blocks menu".
+It is OK if two variables have been created as follows. Click on the top icon of the three leftmost icons to go back to the "Blocks menu".
 
 ![](images/chapxx-kun432/s110.png)
 
-Next, link the data obtained from Google Spreadsheet with the variables. This allows the data contained in the variable (called the "value") to be called in other blocks. Click Integration Block to display the setting screen, then click "Mapping Output".
+Next, we tie the data retrieved from the Google spreadsheet to the variables. This will allow you to call the data that is in the variable (say "value") in other blocks, click on the Integration Block to bring up the configuration screen, then click on Mapping Output.
 
 ![](images/chapxx-kun432/s051.png)
 
@@ -136,11 +136,11 @@ Next, link the data obtained from Google Spreadsheet with the variables. This al
 \clearpage
 //}
 
-The link between the variable and the acquired data is done by "Mapping Output". Click "+ Add Mapping".
+Mapping Output" is used to link variables and acquired data. Click on "+Add Mapping".
 
 ![](images/chapxx-kun432/s050.png)
 
-Click "+ Add Mapping" to select "Column" and "Variable" respectively. Specify the column name of the data obtained from the spreadsheet in "Column" and the variable name to associate it with "Variable". Now the spreadsheet data and variables are linked.
+Click on "+Add Mapping" and you will be able to select "Column" and "Variable" respectively. Specify the column name of the data retrieved from the spreadsheet in "Column" and the variable name to which it is attached in "Variable". This ties the data in the spreadsheet to the variables.
 
 ![](images/chapxx-kun432/s053.png)
 
@@ -148,31 +148,27 @@ Click "+ Add Mapping" to select "Column" and "Variable" respectively. Specify th
 \clearpage
 //}
 
-Now, let's link. Select ```recipe_name``` for "Column" and ```varName``` for "Variable".
+Now let's do the tying. Select ```recipe_name``` for "Column" and ```varName``` for "Variable".
 
 ![](images/chapxx-kun432/s024-2.png)
 
-The data in the ```recipe_name``` column of the spreadsheet is now in the variable ```varName```. Similarly, associate the ```recipe_content``` column with the variable ```varContent```. Click "+ Add Mapping" to add the settings in the same way.
+Now, the data in the ```recipe_name``` column of the spreadsheet is now in the variable ```varName```. Similarly, you can also attach a ```recipe_content``` column to the variable ```varContent```. Click on "+Add Mapping" to add your settings in the same way.
 
-It is OK if both can be linked and look like this. Click Next to return to the canvas.
+If the two are connected and look like this, you're good to go. Click on "Next" to return to the canvas.
 
 ![](images/chapxx-kun432/s058.png)
 
-//embed[latex]{
-\clearpage
-//}
-
-Now, let's use the data obtained from the spreadsheet from within the skill. Place a Speak block next to the Integration block, and connect it to the Integration block that doesn't say "fail".
+Now, let's take the data from the spreadsheet and use it in our skills, by placing a Speak block next to the Integration block and connecting it to the one that doesn't say "fail" in the Integration block.
 
 ![](images/chapxx-kun432/s060.png)
 
-Set the Speak block as follows.
+The Speak block is set up as follows.
 
 ```
 {varName}. The material is {varContent}.
 ```
 
-Let's test it by uploading it to the Alexa Developer Console. It is OK if you can execute the skill several times to confirm that the data of Google Spreadsheet has been obtained and that the data changes randomly.
+Now let's upload it to the Alexa developer console and test it out. Once you've run the skill a few times and are sure that you're getting the data in your Google spreadsheet and that the data changes randomly, you're good to go.
 
 ![](images/chapxx-kun432/s062.png)
 
@@ -180,37 +176,37 @@ Let's test it by uploading it to the Alexa Developer Console. It is OK if you ca
 \clearpage
 //}
 
-### In case the Integration block fails
+### Prepare for integration block failure
 
-Although it is a very convenient Google spreadsheet integration, spreadsheets may not be accessible or data may not be obtained due to communication failure or misconfiguration. Let's do error handling properly.
+Google Spreadsheet integration is very convenient, but there is a possibility that the spreadsheet may not be accessible or data may not be retrieved due to communication problems or setting errors. Let's make sure that you handle the error properly.
 
-Place the Speak block next to the Integration block and connect it to the Integration block's "fail".
+Place the Speak block next to the Integration block and connect it to the "fail" in the Integration block.
 
 ![](images/chapxx-kun432/s066.png)
 
-Set the Speak block as follows.
+The Speak block is set up as follows.
 
 ```
-Sorry, an error has occurred. Please use again after a while.
+Sorry, there was an error. Please come back to us after a while.
 ```
 
-Now, if an error occurs when linking with Google Spreadsheet, this Speak block will be executed.
+Now, this Speak block will be executed when an error occurs during Google Spreadsheet integration.
 
-## Get spreadsheet data by specifying conditions.
+## Get the data of the spreadsheet with conditions.
 
-Next, let's search by specifying conditions. Ask the user which recipe they want to know, receive the utterance, and search the spreadsheet. @<br>{}
+Now, let's do a search by specifying conditions. Ask your users which recipes they would like to know, then take their utterances and search the spreadsheet for them. @<br>{}
 
-### Receive user utterances as search criteria
+### Receive speech from users who are search criteria
 
-Since we need to receive the user's utterance, we will change the flow slightly. First, modify the contents of the first Speak block.
+We'll need to accept the user's speech, so we'll change the flow a bit. First, let's modify the contents of the first Speak block.
 
 ![](images/chapxx-kun432/s071.png)
 
 ```
-Welcome to our recipe skills. With this skill, you can ask the name of the ingredients by saying the name of the recipe. For example, say, "I want to know hamburger recipes."
+Welcome to my home recipe skills. With this skill, you can ask for the name of the ingredients when you say the name of the recipe. For example, say, "I want to know the recipe for hamburgers.
 ```
 
-Add a Choice block and a Speak block between the first Speak block and the Integration block, and connect them as shown below.
+Between the first Speak block and the Integration block, add a Choice block and a Speak block and connect them as follows
 
 ![](images/chapxx-kun432/s072.png)
 
@@ -218,11 +214,11 @@ Add a Choice block and a Speak block between the first Speak block and the Integ
 \clearpage
 //}
 
-Let's make intent / sample utterance / slot. Click the Choice block to create an intent first. Enter ```ask_recipe_intent``` in the "Name new intent or selecting existing intent" and click "Create". This will be the intent name.
+Let's create an Intent/Sampled Speech/Slot by clicking on the Choice block and creating an Intent. In the "Name new intent or selecting existing intent" field, type ```ask_recipe_intent``` and click "Create". This will be the name of the intent.
 
 ![](images/chapxx-kun432/s073.png)
 
-A new section called Utterances appears. Register the sample utterance here. In the "What might the user say to invoke this intent?" Field, enter ```I want to know the recipe for slot_recipe_name```. Don't forget to put a space between ```slot_recipe_name``` and ```I want to know the recipe```.
+You'll see a new section called Utterances. Here you can register a sample utterance. In the "What might the user say to invoke this intent?" field, type `want to know the recipe for ```slot_recipe_name```. Don't forget to put a space between ```slot_recipe_name``` and ```want to know the recipe```.
 
 ![](images/chapxx-kun432/s111.png)
 
@@ -230,11 +226,11 @@ A new section called Utterances appears. Register the sample utterance here. In 
 \clearpage
 //}
 
-Next, select the ```slot_recipe_name``` part with the cursor, and it will be displayed as follows. Click "Create".
+Next, select the part of ```slot_recipe_name``` with the cursor and click "Create" because it will be displayed as follows.
 
 ![](images/chapxx-kun432/s112.png)
 
-The slot creation screen is displayed. ```Slot_recipe_name``` selected earlier will be the slot name. Select “Food” for Slot Type and choose your favorite color for Slot Color. Finally, click "Create Slot". You have now created a slot.
+The slot creation screen appears. Select ```slot_recipe_name``` for the slot name, choose Food for the slot type and your favorite color for the slot color. Finally, click on "Create Slot". The slot has now been created.
 
 ![](images/chapxx-kun432/s113.png)
 
@@ -242,11 +238,11 @@ The slot creation screen is displayed. ```Slot_recipe_name``` selected earlier w
 \clearpage
 //}
 
-When you return to the Choice block setting screen, the sample utterance ```slot_recipe_name``` has changed to the specified color. In this way, sample utterances including slots are created. Finally, don't forget to click the ENTER key to register as a sample utterance.
+If you go back to the Choice block setting screen, the sample utterance ```slot_recipe_name``` has changed to the color you specified. In this way, we will create a sample utterance that includes the slot. Don't forget to register it as a sample utterance by clicking on the ENTER key at the end.
 
 ![](images/chapxx-kun432/s114.png)
 
-If the sample utterance above is displayed below the input field, the sample utterance has been registered. Next, let's add a variation of the sample utterance. ```Please tell me the recipe of slot_recipe_name` and enter```.
+If the sample speech is displayed under the input field, the sample speech has been registered. I will continue to add variations on the sample utterances. Type ```tell me the recipe for slot_recipe_name```.
 
 ![](images/chapxx-kun432/s115.png)
 
@@ -254,22 +250,22 @@ If the sample utterance above is displayed below the input field, the sample utt
 \clearpage
 //}
 
-As before, select ```slot_recipe_name``` with the cursor. ```Slot_recipe_name``` is already registered, so just select it from the list.
+As in the first, select ```slot_recipe_name``` with the cursor. You only need to select it from the list because it is already registered.
 
 ![](images/chapxx-kun432/s116.png)
 
-It is also possible to select a slot by inputting ```{``` when inputting a sample utterance, and then continue inputting. Register some sample utterances in your preferred way.
+It is also possible to select a slot by entering ```{``` at the time of sample utterance input and continue inputting afterwards. Register a few sample utterances in the way you like.
 
 ![](images/chapxx-kun432/s117.png)
 
 
 ```
-Sample utterance example:
+Example of sample utterances: 
 
-I want to know the ingredients of {slot_recipe_name}
-Tell me the ingredients for {slot_recipe_name}
-{slot_recipe_name} recipe
-{slot_recipe_name} ingredients
+I want to know the material for {slot_recipe_name}
+Tell me the material for {slot_recipe_name}.
+Recipe for {slot_recipe_name}
+Material for {slot_recipe_name}
 {slot_recipe_name}
 ```
 
@@ -277,31 +273,31 @@ Tell me the ingredients for {slot_recipe_name}
 \clearpage
 //}
 
-It is OK if it finally feels like this.
+If the final result looks like this, it's OK.
 
 ![](images/chapxx-kun432/s118.png)
 
-The above Speak block is used to listen again if an utterance that does not correspond to the intent set in the Choice block is received.
+The Speak block above is used to listen again when you receive speech that doesn't match the intent you set in the Choice block.
 
 ![](images/chapxx-kun432/s081.png)
 
-Make the following entries:
+Enter the following.
 
 ```
-I'm sorry, I didn't hear well. For example, say "I want to know hamburger recipes".
+I'm sorry, I didn't catch it well. For example, say, "I want to know the recipe for hamburgers.
 ```
 
 //embed[latex]{
 \clearpage
 //}
 
-### Get spreadsheet data by specifying conditions
+### Get data from a spreadsheet with a condition
 
-You are ready to receive user utterances as search criteria. Let's search the spreadsheet based on the utterance. Click the Integration block and click With Settings.
+You are now ready to receive the utterances of users who are search criteria. Now, let's try to search the spreadsheet based on that utterance: click on the Integration block and click on "With Settings".
 
 ![](images/chapxx-kun432/s080.png)
 
-In the case of random, left side "Row Number" was selected, right side "Value to Match" was empty. Select "recipe\_name" on the left and ```{slot_recipe_name}``` on the right, as shown below. This means that you can search by specifying what you spoke with the variable ```slot_recipe_name``` in the"recipe\_name" column. Click “Next”.
+For random, I selected "Row Number" on the left and left "Value to Match" empty on the right. You can do this as follows, with ```recipe_name``` on the left and ```{slot_recipe_name}``` on the right. Now you can search the "recipe\_name" column by specifying the variable ```slot_recipe_name```. Click "Next".
 
 ![](images/chapxx-kun432/s082.png)
 
@@ -309,11 +305,11 @@ In the case of random, left side "Row Number" was selected, right side "Value to
 \clearpage
 //}
 
-Click Next for Mapping Output, go to Test Integration, and click Test Integration.
+Keep "Mapping Output" and click "Next" to go to "Test Integration" and then click "Test Integration".
 
 ![](images/chapxx-kun432/s083.png)
 
-A screen different from the random case came out. Enter "curry rice" in ```slot_user_recipe``` and click" Run ".
+A different screen came up than in the random case. Try typing "curry rice" into the ```slot_user_recipe``` and clicking on "Run".
 
 ![](images/chapxx-kun432/s085.png)
 
@@ -321,11 +317,11 @@ A screen different from the random case came out. Enter "curry rice" in ```slot_
 \clearpage
 //}
 
-You can get curry and rice data properly. In this way, if you use a variable as a search condition in "With Settings", you can test by specifying the value of the variable yourself. Search by another recipe name and confirm that data that meets the conditions can be obtained.
+The data of the curry rice is properly retrieved. As you can see, if you use a variable as a search condition in "With Settings", you can specify the value of the variable and test it yourself. Search by other recipe names and make sure you get data that meets your criteria.
 
 ![](images/chapxx-kun432/s086.png)
 
-It works correctly on the Alexa Developer Console.
+It's working correctly on the Alexa developer console side as well.
 
 ![](images/chapxx-kun432/s087.png)
 
@@ -333,15 +329,15 @@ It works correctly on the Alexa Developer Console.
 \clearpage
 //}
 
-### Processing when there is no search result
+### What to do when there are no search results
 
-Continuing from the previous test, try this time with a recipe name that is not registered in the recipe data.
+Continuing from the previous test, this time try a recipe name that is not registered in the recipe data.
 
 ![](images/chapxx-kun432/s089.png)
 
-```undefined``` means "nothing defined". Not surprisingly, Alexa wouldn't return such an answer, as we tried to find a recipe name that wasn't in the recipe data. Let's fix it a little.
+```undefined``` means ```nothing is defined```. I tried to search for a recipe name that wasn't in the recipe data, so that's natural, but it's not a good idea for Alexa to give me an answer like this. Let's fix that a bit.
 
-Delete the line of the Integration block and the line of the Speak block (the one that is not fail) when the Integration block succeeds, and place an If block under Logic in the Block menu to connect it. Set the Speak block aside a little.
+Remove the Integration block and the Speak block (the non-fail one) and place the If block in the Logic menu of the Block menu.
 
 ![](images/chapxx-kun432/s090.png)
 
@@ -349,11 +345,11 @@ Delete the line of the Integration block and the line of the Speak block (the on
 \clearpage
 //}
 
-The If block is a block that specifies a condition and branches the processing flow according to the result. Here, branching is performed when data can be searched from the recipe name in the Integration block and when data cannot be searched.
+An If block is a block that specifies a condition and splits the process flow according to the result. Here, the Integration block will branch out if the data can be retrieved from the recipe name, and if it cannot.
 
 ![](images/chapxx-kun432/s091.png)
 
-Let's set the conditions. Simply thinking, the variable ```varName``` or the variable ```varContent``` containing the data obtained from the spreadsheet is ```undefined```, so use the equal I think it should be compared. However, this ```undefined``` is a little special programmatically, and it does not work even if it is set as follows.
+Now it's time to set the conditions. If you simply think about it, because the variable ```varName``` or variable ```varContent``` that contains the data obtained from the spreadsheet is ```undefined```, I think it is good if you compare using equals. However, this ```undefined``` is a bit special programmatically, and it doesn't work well even if you set it as follows.
 
 ![](images/chapxx-kun432/s092.png)
 
@@ -361,11 +357,11 @@ Let's set the conditions. Simply thinking, the variable ```varName``` or the var
 \clearpage
 //}
 
-So, twist it a little and try not to judge whether it is ```undefined```, but to judge whether the search result is done properly. First, select ```slot_user_recipe``` for "Select Variable" at the top.
+So we're going to twist it a bit so that we don't judge whether it's ```undefined``` or not, but whether the search results are correct or not. First of all, the top "Select Variable" selects ```slot_user_recipe```.
 
 ![](images/chapxx-kun432/s098.png)
 
-Next, as for "Value" on the lower side, in the initial state, you can only enter the value directly and you can not select the variable. Then, click the ```</>``` icon on the far right. Then a menu is displayed. Click "Variable".
+Next, the "Value" at the bottom can only be entered directly in the initial state, so you can't select a variable. From there, click on the right-most "</>" icon. Then click "Variable" when the menu appears.
 
 ![](images/chapxx-kun432/s094.png)
 
@@ -373,11 +369,11 @@ Next, as for "Value" on the lower side, in the initial state, you can only enter
 \clearpage
 //}
 
-Then, the lower side also changes to "Select Variable", so select ```varName```.
+Then, the bottom side will also change to "Select Variable".
 
 ![](images/chapxx-kun432/s096.png)
 
-In other words, the check is that if the recipe name spoken by the user (```slot_user_recipe```) = the recipe name obtained from the spreadsheet (```varName```), the search results could be obtained. . If this condition is met, the flow branches to "1". Otherwise, that is, to the flow "else" if it cannot be acquired, the flow branches.
+In other words, it checks that "the name of the recipe that the user spoke (```slot_user_recipe```) = the name of the recipe retrieved from the spreadsheet (```varName```), and the search result was retrieved. If the condition is met, the flow will go to "1", and if not, the flow will go to "else".
 
 ![](images/chapxx-kun432/s097.png)
 
@@ -385,11 +381,11 @@ In other words, the check is that if the recipe name spoken by the user (```slot
 \clearpage
 //}
 
-Let's tell Alexa each result in a Speak block. Connect the original Speak block to "1" of the If block. The content of the utterance is changed a little.
+Now, let's talk about each result to Alexa with a Speak block. The original Speak block should be connected to "1" in the If block. I also changed the content of my speech slightly.
 
 ![](images/chapxx-kun432/s100.png)
 
-Add another Speak block, connect it from the "else" of the If block, and set as follows.
+Add another Speak block and connect it to the If block from "else" and configure it as follows.
 
 ![](images/chapxx-kun432/s101.png)
 
@@ -397,38 +393,38 @@ Add another Speak block, connect it from the "else" of the If block, and set as 
 \clearpage
 //}
 
-Finally, test it on the Alexa developer console, and if you can speak out if you can not get the result properly, you are done. Thank you
+Finally, you can test it in the Alexa developer console, and if you're able to speak up if it doesn't get results properly, you're done. Thank you for your hard work.
 
 ![](images/chapxx-kun432/s102.png)
 
-//note[judgment of undefined]{
-Of course you can also determine undefind straight. Voiceflow's If block has a description method called Advanced Expression, which can be determined by programmatic writing. If you are used to programming, this may be easier to understand. See also the official documentation. @<br>{}
+//note[about the decision to undefine]{
+Voiceflow's If block has a description method called "Advanced Expression", which allows you to use programmatic writing to determine the undefind. If you are used to programming, this may be easier to understand. See also the official documentation. @<br>{}
 
-Advanced expression (IF and SET blocks)-Voiceflow Docs @<br>{}
-@ <href> {https://docs.voiceflow.com/voiceflow-documentation/logic-in-voiceflow/advanced-expression-if-and-set-blocks}
+Advanced expression (IF and SET blocks) - Voiceflow Docs @<br>{}
+@<href>{https://docs.voiceflow.com/voiceflow-documentation/logic-in-voiceflow/advanced-expression-if-and-set-blocks} 
 //}
 
 //embed[latex]{
 \clearpage
 //}
 
-## Notes on using Google Spreadsheet
+## Notes on using Google Spreadsheets
 
-It is easy and convenient to use Google Spreadsheets, but it has some weaknesses.
+It is convenient and easy to work with Google Spreadsheet, but there are also weaknesses.
 
-- My personal impression is that accessing Google spreadsheets is a bit slower than accessing general APIs. Keep in mind that repeated access to a spreadsheet in a skill may impair the tempo and rhythm of the user's use of the skill.
-- Also, frequent access to Google Spreadsheets may be restricted by Google. This should be fine for general skill use, but be aware that if your skill becomes popular, you may be subject to this restriction.
-- If a large amount of data exists in the Google spreadsheet (such as a large number of rows or columns, or a large number of characters in a cell), the response may be slow or data may not be obtained. It depends on the combination of rows, columns, data in cells, etc., so it cannot be said unconditionally, but at most we recommend keeping it to less than 1000 rows.
-- When searching with Google Spreadsheet, you can specify only one search target column. Note that you cannot execute complex search conditions like you would do with a general database.
+- It is a personal impression, but access to Google spreadsheets, I feel that the response is a little slow compared to access to general APIs, etc. Please note that accessing the spreadsheet multiple times in a skill may compromise the user's sense of tempo and rhythm when using the skill.
+- Also, high frequency access to Google spreadsheets may result in restricted access from Google. It's fine if the skill is used in general, but please note that if the skill becomes popular, it may be subject to this restriction.
+- If you have a lot of data in a Google spreadsheet (e.g. a lot of rows and columns, a lot of characters in a cell, etc.), the response may be slow or the data may not be retrievable. It depends on the combination of rows, columns, data in cells, etc., so it's hard to say a general rule of thumb, but it's recommended to keep it under 1000 rows at most.
+- When searching in a Google spreadsheet, you can only specify a single column to search for. Please note that it is not possible to perform complex search conditions such as those performed in general databases.
 
-If you meet the above restrictions or are not functional enough with Google Spreadsheets, we recommend using a full-fledged database such as Airtable or Firebase.
+If the above limitations are met, or if Google spreadsheets are functionally bogged down, we recommend using a full-fledged database such as Airtable or Firebase.
 
 - Airtable (@<href>{https://airtable.com/})
 - Firebase (@<href>{https://firebase.google.com/})
 
-## Finally
+## Finally.
 
-What do you think. When you read data using Google Spreadsheets, you get a database-like atmosphere. This time, only the data reference was introduced for the convenience of the magazine, but of course it is also possible to register / update / delete the data in the spreadsheet. For more information, see the following site. Also, besides Google Spreadsheet integration, there are many Voiceflow tips, so please take a look. @<br>{}
+If you use a Google spreadsheet to read out the data, you can feel the atmosphere of a database at once. Of course, it is possible to register, update and delete the data in a spreadsheet. The details are summarized in the following site In addition to Google Spreadsheet integration, we also provide many other Voiceflow tips, so please take a look at them. @<br>{}
 
-- Voiceflow Summer Holiday Advent Calendar @<br>{}
+- Voiceflow Summer Holiday Advent Calendar@<br>{}
 @<href>{https://qiita.com/kun432/items/666ae13f097004ea7935}
